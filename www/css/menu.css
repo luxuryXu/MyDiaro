@@ -1,6 +1,7 @@
 ﻿#sideMenu .person{
     height:7rem;
     padding:0;
+    color: #ffffff;
 }
 #sideMenu .menuList{
     top:7rem;
@@ -8,10 +9,71 @@
 #sideMenu .person .person-name {
     position: fixed;
     width: 100%;
-    height: 2rem;
-    background: rgba(0,0,0,0.1);
-    padding:0.2rem 0;
+    height: 2.4rem;
+    background: rgba(0,0,0,0.2);
+    padding:0.3rem 0;
+}
+#sideMenu .person .person-name .home , #sideMenu .person .person-name .setting{
+    height: 1.8rem;
+    width: 2rem;
+    text-align: center;
+    line-height: 1.8rem;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 0.3rem;
 }
 #sideMenu .person .person-name .home{
-
+    border-right:1px solid white;
+    left: 0;
+}
+#sideMenu .person .person-name .setting{
+    border-left:1px solid white;
+    right: 0;
+}
+#sideMenu .person .person-name .account{
+    position: absolute;
+    width: 1.8rem;
+    height: 1.8rem;
+    left: 2rem;
+    top: 0.3rem;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 1.8rem;
+  color: white;
+}
+#sideMenu .person .person-name .account-name{
+    position: absolute;
+    left: 3.5rem;
+    top: 0.3rem;;
+    font-size: 1rem;
+    right: 2.3rem;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+#sideMenu .person .quantity{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1.2rem;
+    background: rgba(0,0,0,.2);
+}
+#sideMenu .person .quantity .total{
+   position: absolute;
+   left: 0;
+   top: 0.2rem;
+   bottom: 0.2rem;
+   width: 50%;
+   text-align: center;
+}
+#sideMenu .person .quantity .today{
+  position: absolute;
+  right: 0;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  width: 50%;
+  text-align: center;
 }

@@ -15,22 +15,32 @@
   <ion-side-menu side="left" id="sideMenu">
     <ion-header-bar class="person">
         <div class="person-name">
-            <div class="home ion-ios-home-outline"></div>
+            <div class="home"><i class="ion-ios-home-outline"></i></div>
+            <div class="account"><i class="ion-ios-person"></i></div>
+            <div class="account-name">188529511822222</div>
+            <div class="setting"><i class="ion-ios-gear-outline"></i></div>
+        </div>
+        <div class="quantity">
+            <div class="total">合计: <i class="ion-android-create"></i> 5</div>
+            <div class="today">今天: <i class="ion-android-create"></i> 0</div>
         </div>
     </ion-header-bar>
     <ion-content class="menuList">
       <ion-list>
-        <ion-item menu-close ng-click="login()">
-          Login
+        <ion-item menu-close>
+          <div class="">
+
+          </div>
+          <i class="ion-android-calendar"></i>日期
         </ion-item>
         <ion-item menu-close href="#/app/search">
-          Search
+          分类
         </ion-item>
         <ion-item menu-close href="#/app/browse">
-          Browse
+          标签
         </ion-item>
         <ion-item menu-close href="#/app/playlists">
-          Playlists
+          地点
         </ion-item>
       </ion-list>
     </ion-content>
