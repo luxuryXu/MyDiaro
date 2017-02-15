@@ -113,9 +113,20 @@
 #sideMenu .menuList .list>li .theme-list > li{
   display: box;
   display: -webkit-box;
-}
-#sideMenu .menuList .list>li .theme-list > li{
   height: 2rem;
   border-bottom:1px solid #cccccc;
-  border-left:5px solid red;
+  border-left:5px solid blue;
+  line-height: 2rem;
+  padding-left: 1rem;
+}
+#sideMenu .menuList .list>li .theme-list > li .type-title{
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#sideMenu .menuList .list>li .theme-list > li .type-num{
+  width: 20%;
+  text-align: center;
+  font-size: 0.7rem;
 }

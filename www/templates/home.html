@@ -1,0 +1,15 @@
+<ion-view>
+  <ion-header-bar class="theme">
+    <div class="menu-flag"><i class="ion-navicon" menu-toggle="left"></i></div>
+    <div class="diaro-search"><i class="ion-ios-search"></i></div>
+    <div class="home-title">项目列表</div>
+    <div class="write-diaro"><i class="ion-compose"></i></div>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+        {{playlist.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
