@@ -1,0 +1,28 @@
+#home-view .home-header{
+  position: relative;
+  height: 2.4rem;
+}
+#home-view .home-header .menu-flag , #home-view .home-header .diaro-search , #home-view .home-header .write-diaro{
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  text-align: center;
+}
+#home-view .home-header .diaro-search{
+  font-size: 1.6rem;
+  left: 3rem;
+}
+#home-view .home-header .home-title{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  font-size: 1rem;
+}
+#home-view .home-header .write-diaro{
+  right: 0;
+  font-size: 1.6rem;
+}
