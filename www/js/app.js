@@ -5,8 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 angular.module('starter.controllers',[])
-angular.module('starter', ['ionic', 'starter.controllers'])
-.run(function($ionicPlatform) {
+angular.module('starter.services',[])
+angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
+.run(function($ionicPlatform,$rootScope) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -22,6 +23,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
+
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
@@ -31,43 +33,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
-      }
-    }
-  })
-
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
+    .state('app.home', {
+      url: '/home',
       views: {
         'menuContent': {
           templateUrl: 'templates/home.html',
-          controller: 'PlaylistsCtrl'
+          controller: 'HomeCtrl'
         }
       }
     })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
-  })
 
     .state('app.map',{
       url: '/map',
@@ -79,5 +53,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/home');
 });
