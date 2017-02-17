@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout , toolsService) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -8,7 +8,13 @@ angular.module('starter.controllers', [])
   // listen for the $ionicView.enter event:
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-
+  /****随机色****/
+  var randowColor;
+  var borderC = $('.borderC');
+  for(var i=0; i<borderC.length; i++){
+      randowColor = toolsService.randomColor();
+      $(borderC[i]).css('border-left-color' , randowColor);
+  }
   // Form data for the login modal
   $scope.loginData = {};
 

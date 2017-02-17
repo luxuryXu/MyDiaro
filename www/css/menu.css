@@ -115,10 +115,13 @@
   display: -webkit-box;
   height: 2rem;
   border-bottom:1px solid #cccccc;
-  border-left:5px solid blue;
+  border-left:5px solid;
   line-height: 2rem;
   padding-left: 1rem;
 }
+/*#sideMenu .menuList .list>li .theme-list .borderC{*/
+  /*border-left-color: #0a9dc7;*/
+/*}*/
 #sideMenu .menuList .list>li .theme-list > li .type-title{
   width: 80%;
   overflow: hidden;
