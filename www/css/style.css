@@ -1,5 +1,8 @@
 /* Empty. Add your own CSS if you like */
 .theme{
-  background: orange;
+  background: lightcoral;
   color: #fff;
+}
+.theme-word{
+  color: lightcoral !important;
 }

@@ -7,7 +7,7 @@
 angular.module('starter.controllers',[])
 angular.module('starter.services',[])
 angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
-.run(function($ionicPlatform,$rootScope) {
+.run(function($ionicPlatform,$rootScope,$state) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,6 +21,20 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       StatusBar.styleDefault();
     }
   });
+  $rootScope.$on('$ionicView.enter' , function(){
+    var index = {
+      'app.home':0,
+      'app.passing-travellers':1,
+      'app.mine':2
+    }[$state.current.name];
+    if(index != undefined){
+      $('#bottom-view').show();
+      $('#bottom-view>a').eq(index).addClass('theme-word');
+      $('#bottom-view>a').eq(index).siblings().removeClass('theme-word');
+    }else{
+      $('#bottom-view').hide();
+    }
+  })
 })
 
 
@@ -40,6 +54,26 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
         'menuContent': {
           templateUrl: 'templates/home.html',
           controller: 'HomeCtrl'
+        }
+      }
+    })
+
+    .state('app.passing-travellers', {
+      url: '/passing-travellers',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/passing-travellers.html',
+          controller: 'PassingTravellersCtrl'
+        }
+      }
+    })
+
+    .state('app.mine', {
+      url: '/mine',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/mine.html',
+          controller: 'MineCtrl'
         }
       }
     })
