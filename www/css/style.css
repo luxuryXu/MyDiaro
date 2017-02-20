@@ -1,8 +1,21 @@
 /* Empty. Add your own CSS if you like */
 .theme{
-  background: lightcoral;
-  color: #fff;
+  background: lightcoral !important;
+  color: #fff !important;
 }
 .theme-word{
   color: lightcoral !important;
+}
+.public-header{
+  height: 2.4rem;
+  line-height: 2.4rem;
+  font-size: 18px;
+  padding-left: 5px;
+}
+.public-header i{
+  font-size: 26px;
+  margin-right: 5px;
+}
+.public-header span{
+  vertical-align: top;
 }

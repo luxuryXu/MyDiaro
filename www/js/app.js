@@ -86,6 +86,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
           controller: 'MapCtrl'
         }
       }
+    })
+
+    .state('app.data-modify' , {
+      url: '/data-modify',
+      views: {
+        'menuContent': {
+          templateUrl : 'templates/data-modify.html',
+          controller: 'DataModifyCtrl'
+        }
+      }
     });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
