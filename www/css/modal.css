@@ -1,0 +1,21 @@
+.modal-view{
+  background: #ffffff;
+  text-align: center;
+  letter-spacing: 1px;
+  height: 100%;
+  position: relative;
+}
+.modal-list{
+  border-top: 1px solid #eeeeee;
+  height: 45px;
+  line-height: 45px;
+  color: #000;
+  font-size: 18px;
+}
+.modal-view .modal-title{
+  color: #333;
+  font-size: 14px;
+}
+.active{
+  background: rgba(0,0,0,.2);
+}
