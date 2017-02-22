@@ -27,8 +27,9 @@
   font-size: 1.6rem;
 }
 #home-view ion-content{
-  padding: 0 5px 5px 5px;
-  top: 4.8rem;
+  padding: 45px 5px 5px;
+  top: 2.4rem;
+  bottom: 49px;
 }
 #home-view .first-time{
   height: 40px;
@@ -37,14 +38,15 @@
   top: 2.4rem;
   left: 0;
   right: 0;
-  background: #ffffff;
+  background-color: rgba(255,255,255,.9);
   padding-left: 5px;
+  z-index: 20;
 }
 #home-view .diary{
-  margin-top: 5px;
   border-radius: 3px;
   border-top:3px solid;
   background: #ffffff;
+  margin-bottom: 5px;
 }
 #home-view .diary .diary-info{
   display: box;

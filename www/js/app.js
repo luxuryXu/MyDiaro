@@ -21,20 +21,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       StatusBar.styleDefault();
     }
   });
-  $rootScope.$on('$ionicView.enter' , function(){
-    var index = {
-      'app.home':0,
-      'app.passing-travellers':1,
-      'app.mine':2
-    }[$state.current.name];
-    if(index != undefined){
-      $('#bottom-view').show();
-      $('#bottom-view>a').eq(index).addClass('theme-word');
-      $('#bottom-view>a').eq(index).siblings().removeClass('theme-word');
-    }else{
-      $('#bottom-view').hide();
-    }
-  })
+
 })
 
 

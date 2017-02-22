@@ -11,10 +11,12 @@ angular.module('starter.controllers', [])
   /****随机色****/
   var randowColor;
   var borderC = $('.borderC');
+
   for(var i=0; i<borderC.length; i++){
       randowColor = toolsService.randomColor();
       $(borderC[i]).css('border-left-color' , randowColor);
   }
+
   // Form data for the login modal
   $scope.loginData = {};
 
