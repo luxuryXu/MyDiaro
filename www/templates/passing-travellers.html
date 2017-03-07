@@ -1,9 +1,44 @@
-<ion-view>
-  <ion-nav-title style="text-align: center">
-    <
-  </ion-nav-title>
-  <ion-content>
-
+<ion-view hide-nav-bar="true" id="passing-view">
+  <ion-header-bar class="theme">
+    <div class="title">
+      <div class="title-links">
+        <a class="themeWord active">最新</a><a>最热</a><a>我的</a>
+      </div>
+    </div>
+  </ion-header-bar>
+  <ion-content style="bottom: 49px;">
+    <ion-slide-box>
+      <!--最新-->
+      <ion-slide>
+        <div class="slide-content">
+          <div class="d" ng-repeat="i in [1,2,4,5,2,5] track by $index">
+            <div class="d-head">
+              <img src="../img/ionic.png" />名字
+            </div>
+            <div class="d-content">
+              我还是很想你，我还是很爱你。
+              我还是很想你，我还是很爱你。
+              我还是很想你，我还是很爱你。
+              我还是很想你，我还是很爱你。
+              我还是很想你，我还是很爱你。
+              我还是很想你，我还是很爱你。
+            </div>
+            <div class="d-info">
+              <div class="d-time">7分钟前</div>
+              <div class="d-praise">7435345<i class="ion-ios-heart-outline"></i></div>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+      <!--最热-->
+      <ion-slide>
+        <div class="slide-content">2</div>
+      </ion-slide>
+      <!--我的-->
+      <ion-slide>
+        <div class="slide-content">3</div>
+      </ion-slide>
+    </ion-slide-box>
   </ion-content>
   <div ng-include="'templates/bottom-nav.html'"></div>
 </ion-view>
