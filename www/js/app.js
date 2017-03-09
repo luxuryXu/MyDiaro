@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter.controllers',[])
 angular.module('starter.services',[])
-angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers','starter.services','ui.thumbnail'])
 .run(function($ionicPlatform,$rootScope,$state) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -26,7 +26,9 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
 
 
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, ThumbnailServiceProvider) {
+  ThumbnailServiceProvider.defaults.width = 150;
+  ThumbnailServiceProvider.defaults.height = 150;
   $stateProvider
 
     .state('app', {
@@ -83,7 +85,17 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
           controller: 'DataModifyCtrl'
         }
       }
-    });
+    })
+
+    .state('app.collections' , {
+      url: '/collections',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/collections.html',
+          controller: 'CollectionsCtrl'
+        }
+      }
+    })
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });
