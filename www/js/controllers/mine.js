@@ -24,6 +24,4 @@ angular.module('starter.controllers')
       $scope.shareModal.show();
     });
   }
-
-
 });
