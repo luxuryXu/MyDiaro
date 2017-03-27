@@ -1,0 +1,26 @@
+<ion-view hide-nav-bar="true" id="diary-view">
+  <ion-content>
+    <div class="mine-info">
+      <div class="mine-head"></div>
+      <p class="mine-name">赏金猎人的男朋友</p>
+      <p class="mine-words">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+    </div>
+    <div class="main">
+      <div class="main-top">
+        <span class="time">{{time}}</span>
+        <span class="eye"><i class="ion-ios-eye-outline"></i> {{eyeNum}}</span>
+        <span class="loves"><i class="ion-ios-heart-outline"></i> {{collections}}</span>
+      </div>
+      <div class="main-mid">
+        {{text}}
+      </div>
+    </div>
+  </ion-content>
+  <div class="operates theme">
+    <div ng-click="$ionicGoBack();"><i class="ion-android-arrow-back"></i></div>
+    <div><i class="ion-ios-heart-outline"></i></div>
+    <div><i class="ion-ios-star-outline"></i></div>
+    <div><i class="ion-android-share-alt"></i></div>
+    <div><i class="ion-alert-circled"></i></div>
+  </div>
+</ion-view>

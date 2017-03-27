@@ -1,0 +1,38 @@
+#diary-view ion-content{
+  background: #ffffff;
+}
+#diary-view .main{
+  padding: 5px;
+  color: #444;
+}
+#diary-view .main .main-top{
+  height: 20px;
+  line-height: 20px;
+}
+#diary-view .main-top .time{
+  float: left;
+}
+#diary-view .main-top .eye , #diary-view .main-top .loves{
+  float: right;
+}
+#diary-view .main-top .loves{
+  margin-right: 5px;
+}
+#diary-view .main-mid{
+  padding: 5px 0;
+}
+#diary-view .operates{
+  height: 40px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: box;
+  display: -webkit-box;
+  text-align: center;
+  line-height: 40px;
+}
+#diary-view .operates>div{
+  box-flex:1;
+  -webkit-box-flex: 1;
+  font-size: 20px;
+}
