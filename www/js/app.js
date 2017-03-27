@@ -6,7 +6,8 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter.controllers',[])
 angular.module('starter.services',[])
-angular.module('starter', ['ionic', 'starter.controllers','starter.services','ui.thumbnail'])
+angular.module('starter.directives',[])
+angular.module('starter', ['ionic', 'starter.controllers','starter.services','starter.directives','ui.thumbnail'])
 .run(function($ionicPlatform,$rootScope,$state) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -93,6 +94,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','ui
         'menuContent': {
           templateUrl: 'templates/collections.html',
           controller: 'CollectionsCtrl'
+        }
+      }
+    })
+
+    .state('app.write' , {
+      url: '/write',
+      views: {
+        'menuContent': {
+          templateUrl : 'templates/write.html',
+          controller: 'WriteCtrl'
         }
       }
     })

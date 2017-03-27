@@ -14,4 +14,14 @@ angular.module('starter.controllers')
       $scope.avatarModal.show();
     });
   };
+  $scope.showShareList = function(){
+    var scope = $scope.$new();
+    $ionicModal.fromTemplateUrl('templates/share.html',{
+      scope : scope,
+      animation : 'slide-in-up'
+    }).then(function(modal){
+      $scope.shareModal = modal;
+      $scope.shareModal.show();
+    });
+  }
 });
