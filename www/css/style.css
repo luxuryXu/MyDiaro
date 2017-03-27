@@ -3,17 +3,17 @@
   font-family: '微软雅黑';
 }
 .theme{
-  background: lightcoral !important;
+  background: #666699 !important;
   color: #fff !important;
 }
 .themeWord{
-  color: lightcoral !important;
+  color: #666699 !important;
 }
 ion-content{
   background: #f1f1f1;
 }
 .bar.bar-stable{
-  background-color: lightcoral;
+  background-color: #666699;
 }
 .bar.bar-stable .title, .bar.bar-header .title {
   color: #ffffff;

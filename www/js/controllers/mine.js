@@ -2,8 +2,9 @@
  * Created by Administrator on 2017/2/18.
  */
 angular.module('starter.controllers')
-.controller('MineCtrl' , function($scope,$ionicModal,$rootScope,$state){
+.controller('MineCtrl' , function($scope,$ionicModal,$rootScope,$state,$ionicLoading,Camera){
   $scope.name = $state.current.name;
+  //photo
   $scope.showHeadList = function(){
     var scope = $scope.$new();
     $ionicModal.fromTemplateUrl('templates/photo.html',{
@@ -14,6 +15,7 @@ angular.module('starter.controllers')
       $scope.avatarModal.show();
     });
   };
+  //share
   $scope.showShareList = function(){
     var scope = $scope.$new();
     $ionicModal.fromTemplateUrl('templates/share.html',{
@@ -24,4 +26,18 @@ angular.module('starter.controllers')
       $scope.shareModal.show();
     });
   }
+
+  $scope.takePhoto = function () {
+    Camera.takePhoto({
+      quality :75,
+      targetWidth:100,
+      targetHeight:100,
+      saveToPhotoAlbum:true
+    }).then(function(imageURI){
+      $scope.lastPhoto = imageURI;
+    },function(err){
+      $ionicLoading.show({template:"您已取消相机使用！",duration:2000});
+    });
+  }
+
 });
