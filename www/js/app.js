@@ -106,6 +106,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','st
         }
       }
     })
+
+    .state('app.diaro-detail' , {
+      url: '/diaro-detail/:id',
+      views: {
+        'menuContent': {
+          templateUrl : 'templates/diaro-detail.html',
+          controller: 'DiaroCtrl'
+        }
+      }
+    })
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });
