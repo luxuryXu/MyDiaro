@@ -1,0 +1,39 @@
+#write-view .time{
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #cccccc;
+}
+#write-view .time>a{
+  color: #444;
+}
+#write-view .time>a:nth-child(1){
+  float: left;
+  margin-left: 10px;
+}
+#write-view .time>a:nth-child(2){
+  float: right;
+  margin-right: 10px;
+}
+#write-view .time i{
+  margin-right: 5px;
+}
+#write-view .title{
+  padding: 5px;
+}
+#write-view .title>input{
+  width: 100%;
+  background: #d1d3d6;
+  padding-left: 5px;
+}
+#write-view .content{
+  padding: 0 5px 5px 5px;
+}
+#write-view .content>textarea{
+  width: 100%;
+  min-height: 100px;
+  background: #d1d3d6;
+  padding: 8px 5px;
+  line-height: 20px;
+  resize: none;
+  overflow-y: visible;
+}
