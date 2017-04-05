@@ -27,9 +27,8 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','st
 
 
 
-.config(function($stateProvider, $urlRouterProvider, ThumbnailServiceProvider) {
-  ThumbnailServiceProvider.defaults.width = 150;
-  ThumbnailServiceProvider.defaults.height = 150;
+.config(function($stateProvider, $urlRouterProvider) {
+
   $stateProvider
 
     .state('app', {
@@ -104,6 +103,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','st
         'menuContent': {
           templateUrl : 'templates/write.html',
           controller: 'WriteCtrl'
+        }
+      }
+    })
+
+    .state('app.diaro-detail' , {
+      url: '/diaro-detail/:id',
+      views: {
+        'menuContent': {
+          templateUrl : 'templates/diaro-detail.html',
+          controller: 'DiaroCtrl'
         }
       }
     })

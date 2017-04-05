@@ -1,13 +1,13 @@
 #mine-view{
   background: #f2f2f2;
 }
-#mine-view .mine-info{
+.mine-info{
   height: 12rem;
   background: url("../img/ionic.png") no-repeat;
   background-size: 100%;
   position: relative;
 }
-#mine-view .mine-head{
+.mine-head{
   position: absolute;
   width: 90px;
   height: 90px;
@@ -18,7 +18,7 @@
   left: calc(50% - 45px);
   bottom: 5rem;
 }
-#mine-view .mine-name{
+.mine-name{
   position: absolute;
   width: 100%;
   height: 20px;
@@ -32,7 +32,7 @@
   padding: 0 0.5rem;
   overflow: hidden;
 }
-#mine-view .mine-words{
+.mine-words{
   position: absolute;
   height: 20px;
   width: 100%;
