@@ -11,12 +11,15 @@ angular.module('starter.controllers')
       $scope.loginModal.hide();
     })
     //日记边框
-    var borderT = $('.borderT');
-    var randomColor;
-    for(var i=0; i<borderT.length; i++){
-      randomColor = toolsService.randomColor();
-      $(borderT[i]).css('border-top-color' , randomColor);
-    }
+    setTimeout(function () {
+      var borderT = $('.borderT');
+      var randomColor;
+      for(var i=0; i<borderT.length; i++){
+        randomColor = toolsService.randomColor();
+        $(borderT[i]).css('border-top-color' , randomColor);
+      }
+    },200);
+
     $scope.name = $state.current.name;
 
     $scope.myDiaries = [
