@@ -113,7 +113,7 @@
 #sideMenu .menuList .list>li .theme-list > li{
   display: box;
   display: -webkit-box;
-  height: 2rem;
+  height: 2.4rem;
   border-bottom:1px solid #cccccc;
   border-left:5px solid;
   line-height: 2rem;
