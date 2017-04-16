@@ -7,72 +7,7 @@
   </ion-header-bar>
   <div class="first-time">二月,2017</div>
   <ion-content>
-    <div class="diary borderT">
-      <div class="diary-info">
-        <div class="diary-time">
-          <div class="diary-day">周一</div>
-          <div class="diary-date">20</div>
-          <div class="diary-clock">21:47</div>
-        </div>
-        <div class="diary-content">
-          <div class="diary-title">标题</div>
-          <div class="diary-main">正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</div>
-        </div>
-      </div>
-      <div class="diary-img">
-        <img src="img/ionic.png" width="100%"/>
-      </div>
-      <div class="diary-type">
-        <span><i class="ion-ios-folder"></i> Love</span>
-        <span><i class="ion-ios-pricetag"></i> 2</span>
-        <span><i class="ion-image"></i> 2</span>
-        <span><i class="ion-location"></i> 淮安</span>
-      </div>
-    </div>
-    <div class="diary borderT">
-      <div class="diary-info">
-        <div class="diary-time">
-          <div class="diary-day">周一</div>
-          <div class="diary-date">20</div>
-          <div class="diary-clock">21:47</div>
-        </div>
-        <div class="diary-content">
-          <div class="diary-title">标题</div>
-          <div class="diary-main">正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</div>
-        </div>
-      </div>
-      <div class="diary-img">
-        <img src="img/ionic.png" width="100%"/>
-      </div>
-      <div class="diary-type">
-        <span><i class="ion-ios-folder"></i> Love</span>
-        <span><i class="ion-ios-pricetag"></i> 2</span>
-        <span><i class="ion-image"></i> 2</span>
-        <span><i class="ion-location"></i> 淮安</span>
-      </div>
-    </div>
-    <div class="diary borderT">
-      <div class="diary-info">
-        <div class="diary-time">
-          <div class="diary-day">周一</div>
-          <div class="diary-date">20</div>
-          <div class="diary-clock">21:47</div>
-        </div>
-        <div class="diary-content">
-          <div class="diary-title">标题</div>
-          <div class="diary-main">正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</div>
-        </div>
-      </div>
-      <div class="diary-img">
-        <img src="img/ionic.png" width="100%"/>
-      </div>
-      <div class="diary-type">
-        <span><i class="ion-ios-folder"></i> Love</span>
-        <span><i class="ion-ios-pricetag"></i> 2</span>
-        <span><i class="ion-image"></i> 2</span>
-        <span><i class="ion-location"></i> 淮安</span>
-      </div>
-    </div>
+    <my-diary ng-model=myDiary ng-repeat="myDiary in myDiaries"></my-diary>
   </ion-content>
   <div ng-include="'templates/bottom-nav.html'"></div>
 </ion-view>

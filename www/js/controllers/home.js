@@ -19,4 +19,11 @@ angular.module('starter.controllers')
     }
     $scope.name = $state.current.name;
 
+    $scope.myDiaries = [
+      {
+        id:1,
+        title : '我的标题'
+      }
+    ];
+
   });
