@@ -1,4 +1,10 @@
 {
   "name": "MyDiaro",
-  "app_id": ""
+  "app_id": "",
+  "proxies": [
+    {
+        "path": "/default",
+        "proxyUrl": "http://localhost:8080"
+    }
+  ]
 }
