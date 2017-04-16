@@ -19,3 +19,15 @@
 .active{
   background: rgba(0,0,0,.2);
 }
+
+.share-item{
+  float: left;
+  width: 33%;
+  height: 40px;
+  margin-top: 12px;
+}
+.share-item img{
+   width: 40px;
+   height: 40px;
+}
+

@@ -1,5 +1,7 @@
-<ion-modal-view style="top: 80%;left: 0;width: 100%; bottom: 0;">
+<ion-modal-view style="left: 0;width: 100%; bottom: 0; top: calc(100% - 80px);" ng-controller=ShareCtrl>
     <div class="modal-view">
-
+        <div class="share-item" ng-click=share.shareToQQ();><img src="img/share/qq.png"/></div>
+        <div class="share-item"><img src="img/share/weixin.png"/></div>
+        <div class="share-item"><img src="img/share/weibo.png"/></div>
     </div>
 </ion-modal-view>

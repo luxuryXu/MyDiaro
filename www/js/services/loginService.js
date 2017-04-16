@@ -2,7 +2,7 @@
  * Created by Administrator on 2017/4/8.
  */
 angular.module('starter.services')
-.service('loginService' , function ($http,urlService) {
+.service('loginService' , function ($http) {
   return{
     login: function (loginData) {
       return $http({
