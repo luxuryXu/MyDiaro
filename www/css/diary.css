@@ -1,0 +1,42 @@
+.d{
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.d .d-head{
+  height: 50px;
+  line-height: 50px;
+  width: 90%;
+  margin: auto;
+  border-bottom:1px solid #ffffff;
+}
+.d .d-head>img{
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.d .d-content{
+  height: 73px;
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  overflow: hidden;
+}
+.d .d-info{
+  height: 40px;
+  line-height: 40px;
+}
+.d .d-info .d-time{
+  float: left;
+  margin-left: 5%;
+}
+.d .d-info .d-praise{
+  float: right;
+  margin-right: 8px;
+  font-size: 16px;
+}
+.d .d-info .d-praise i {
+  margin-left: 5px;
+}
