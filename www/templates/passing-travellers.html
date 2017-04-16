@@ -11,67 +11,19 @@
       <!--最新-->
       <ion-slide>
         <div class="slide-content">
-          <div class="d" ng-repeat="i in [1,2,4,5,2,5] track by $index">
-            <div class="d-head">
-              <img src="../img/ionic.png" />名字
-            </div>
-            <div class="d-content">
-              我还是很想你，我还是很爱你。
-              我还是很想你，我还是很爱你。
-              我还是很想你，我还是很爱你。
-              我还是很想你，我还是很爱你。
-              我还是很想你，我还是很爱你。
-              我还是很想你，我还是很爱你。
-            </div>
-            <div class="d-info">
-              <div class="d-time">7分钟前</div>
-              <div class="d-praise">7435345<i class="ion-ios-heart-outline"></i></div>
-            </div>
-          </div>
+          <diary ng-model=diary ng-repeat="diary in diaries"></diary>
         </div>
       </ion-slide>
       <!--最热-->
       <ion-slide>
         <div class="slide-content">
-          <div class="d" ng-repeat="i in [1,2,4,5] track by $index">
-            <div class="d-head">
-              <img src="../img/ionic.png" />名字
-            </div>
-            <div class="d-content">
-              我还是很想你，我还是很爱你。
-              我还是很想你，我还是很爱你。
-              我还是很想你，我还是很爱你。
-              我还是很想你，我还是很爱你。
-              我还是很想你，我还是很爱你。
-              我还是很想你，我还是很爱你。
-            </div>
-            <div class="d-info">
-              <div class="d-time">7分钟前</div>
-              <div class="d-praise">7435345<i class="ion-ios-heart-outline"></i></div>
-            </div>
-          </div>
-        </div>
+          <diary ng-model=diary ng-repeat="diary in diaries"></diary>
+         </div>
       </ion-slide>
       <!--我的-->
       <ion-slide>
         <div class="slide-content">
-          <div class="d" ng-repeat="i in [1,2] track by $index">
-            <div class="d-head">
-              <img src="../img/ionic.png" />名字
-            </div>
-            <div class="d-content">
-              我还是很想你，我还是很爱你。
-              我还是很想你，我还是很爱你。
-              我还是很想你，我还是很爱你。
-              我还是很想你，我还是很爱你。
-              我还是很想你，我还是很爱你。
-              我还是很想你，我还是很爱你。
-            </div>
-            <div class="d-info">
-              <div class="d-time">7分钟前</div>
-              <div class="d-praise">7435345<i class="ion-ios-heart-outline"></i></div>
-            </div>
-          </div>
+          <diary ng-model=diary ng-repeat="diary in diaries"></diary>
         </div>
       </ion-slide>
     </ion-slide-box>
