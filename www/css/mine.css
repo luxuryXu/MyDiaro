@@ -3,7 +3,7 @@
 }
 .mine-info{
   height: 12rem;
-  background: url("../img/ionic.png") no-repeat;
+  background: url("../img/user/beijing@2x.png") no-repeat;
   background-size: 100%;
   position: relative;
 }
@@ -13,7 +13,7 @@
   height: 90px;
   border-radius: 50%;
   border: 2px solid #ffffff;
-  background: url("../img/ionic.png") no-repeat;
+  background: url("../img/user/beijing@2x.png") no-repeat;
   background-size: 100%;
   left: calc(50% - 45px);
   bottom: 5rem;
