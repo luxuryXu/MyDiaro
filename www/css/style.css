@@ -21,3 +21,12 @@ ion-content{
 .bar-stable .button.button-clear, .bar-header .button.button-clear {
   color: #ffffff;
 }
+.save{
+  margin: 20px auto;
+  text-align: center;
+}
+.save button{
+  width: 80px;
+  height: 40px;
+  border: none;
+}

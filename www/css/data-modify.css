@@ -12,12 +12,4 @@
   resize: none;
   padding: 5px;
 }
-#dataModify-view .save{
-  margin: 20px auto;
-  text-align: center;
-}
-#dataModify-view .save button{
-  width: 80px;
-  height: 40px;
-  border: none;
-}
+

@@ -126,6 +126,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','st
         }
       }
     })
+
+    .state('app.modify-password' , {
+      url : '/modify-password',
+      views: {
+        'menuContent':{
+          templateUrl : 'templates/modify-password.html',
+          controller: 'ModifyPasswordCtrl'
+        }
+      }
+    })
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });
