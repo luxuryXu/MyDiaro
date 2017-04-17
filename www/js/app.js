@@ -136,6 +136,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','st
         }
       }
     })
+
+    .state('app.lock' , {
+      url : '/lock',
+      views : {
+        'menuContent': {
+          templateUrl : 'templates/lock.html',
+          controller: 'LockCtrl'
+        }
+      }
+    })
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });
