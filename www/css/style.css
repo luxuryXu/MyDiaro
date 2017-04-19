@@ -15,6 +15,10 @@ ion-content{
 .bar.bar-stable{
   background-color: lightcoral;
 }
+.toggle input:checked + .track{
+  background: lightcoral;
+  border-color: lightcoral;
+}
 .bar.bar-stable .title, .bar.bar-header .title {
   color: #ffffff;
 }
