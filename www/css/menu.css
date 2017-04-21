@@ -67,7 +67,7 @@
    width: 50%;
    text-align: center;
 }
-#sideMenu .person .quantity .today{
+#sideMenu .person .quantity .present{
   position: absolute;
   right: 0;
   top: 0.2rem;
@@ -132,4 +132,14 @@
   width: 20%;
   text-align: center;
   font-size: 0.7rem;
+}
+
+#sideMenu .testClass > input {
+  border-bottom: 3px solid #1A4987;
+  border-left: transparent;
+  border-right: transparent;
+  border-top: transparent;
+}
+#sideMenu .date-wrap{
+  background: #fff;
 }

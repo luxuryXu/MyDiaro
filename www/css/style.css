@@ -34,3 +34,27 @@ ion-content{
   height: 40px;
   border: none;
 }
+/*date*/
+.mb-datepicker{
+  width: 100%;
+  margin-top: -34px;
+}
+.mb-datepicker table{
+  width: 100%;
+}
+.header-year , .header-month{
+  width: 50%;
+}
+.mb-datepicker table tbody tr td.day-head{
+  font-size: 12px;
+}
+.header-year-wrapper , .mb-datepicker table tbody tr.days .day-item:hover{
+  background: lightcoral;
+}
+.day{
+  color: lightcoral !important;
+}
+.today{
+  background: lightcoral !important;
+  opacity: .7;
+}

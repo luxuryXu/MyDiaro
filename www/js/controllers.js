@@ -17,6 +17,37 @@ angular.module('starter.controllers', [])
       $(borderC[i]).css('border-left-color' , randowColor);
   }
 
+
+  $scope.header = {
+    monday: 'Mon',
+    tuesday: 'Tue',
+    wednesday: 'Wed',
+    thursday: 'Thu',
+    friday: 'Fri',
+    saturday: 'Sat',
+    sunday: 'Sun'
+  }
+  $scope.arrows = {
+    year: {
+      left: 'img/white_arrow_left.svg',
+      right: 'img/white_arrow_right.svg'
+    },
+    month: {
+      left: 'img/grey_arrow_left.svg',
+      right: 'img/grey_arrow_right.svg'
+    }
+  };
+
+  setTimeout(function(){
+    var height = $('.mb-datepicker').height();
+    $('.date-wrap').css('height', height + 'px');
+  },100);
+
+  $scope.isSlide = function(index){
+    $('.list>li').eq(index).find('.theme-list').slideToggle(100);
+  }
+
+
   // Form data for the login modal
   $scope.loginData = {};
 

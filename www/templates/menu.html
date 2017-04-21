@@ -22,20 +22,30 @@
         </div>
         <div class="quantity">
             <div class="total">合计: <i class="ion-android-create"></i> 5</div>
-            <div class="today">今天: <i class="ion-android-create"></i> 0</div>
+            <div class="present">今天: <i class="ion-android-create"></i> 0</div>
         </div>
     </ion-header-bar>
     <ion-content class="menuList">
       <ul class="list">
         <li class="theme">
-          <div class="theme-title">
+          <div class="theme-title" ng-click="isSlide(0);">
             <div class="attr-icon"><i class="ion-calendar"></i></div>
             <div class="attr-name"><i class="ion-ios-arrow-down"></i>日期</div>
           </div>
-
+          <div class="date-wrap theme-list">
+            <mb-datepicker element-id='date1'
+                           input-class="testClass"
+                           input-name="testName"
+                           arrows="arrows"
+                           calendar-header="header"
+                           date="date"
+                           date-format="YYYY-MM-DD">
+            </mb-datepicker>
+            <!--<input  ng-model="date" />-->
+          </div>
         </li>
         <li class="theme">
-          <div class="theme-title">
+          <div class="theme-title" ng-click="isSlide(1);">
             <div class="attr-icon"><i class="ion-ios-keypad-outline"></i></div>
             <div class="attr-name"><i class="ion-ios-arrow-down"></i>分类</div>
           </div>
@@ -67,7 +77,7 @@
           </ul>
         </li>
         <li class="theme">
-          <div class="theme-title">
+          <div class="theme-title" ng-click="isSlide(2);">
             <div class="attr-icon"><i class="ion-ios-keypad-outline"></i></div>
             <div class="attr-name"><i class="ion-ios-arrow-down"></i>标签</div>
           </div>
@@ -87,7 +97,7 @@
           </ul>
         </li>
         <li class="theme">
-          <div class="theme-title">
+          <div class="theme-title" ng-click="isSlide(3);">
             <div class="attr-icon"><i class="ion-ios-keypad-outline"></i></div>
             <div class="attr-name"><i class="ion-ios-arrow-down"></i>地点</div>
           </div>

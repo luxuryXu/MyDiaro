@@ -7,7 +7,7 @@
 angular.module('starter.controllers',[])
 angular.module('starter.services',[])
 angular.module('starter.directives',[])
-angular.module('starter', ['ionic', 'starter.controllers','starter.services','starter.directives','ui.thumbnail'])
+angular.module('starter', ['ionic', 'starter.controllers','starter.services','starter.directives','ui.thumbnail','materialDatePicker'])
 .run(function($ionicPlatform,$rootScope,$state) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
