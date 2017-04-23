@@ -21,6 +21,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','st
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    $rootScope.theme = '#337ab7';
   });
 
 })
@@ -143,6 +144,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','st
         'menuContent': {
           templateUrl : 'templates/lock.html',
           controller: 'LockCtrl'
+        }
+      }
+    })
+
+    .state('app.theme' , {
+      url : '/theme',
+      views : {
+        'menuContent': {
+          templateUrl : 'templates/theme.html',
+          controller: 'ThemeCtrl'
         }
       }
     })

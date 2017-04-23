@@ -3,21 +3,21 @@
   font-family: '微软雅黑';
 }
 .theme{
-  background: lightcoral !important;
+  background: #337ab7 !important;
   color: #fff !important;
 }
 .themeWord{
-  color: lightcoral !important;
+  color: #337ab7 !important;
 }
 ion-content{
   background: #f1f1f1;
 }
 .bar.bar-stable{
-  background-color: lightcoral;
+  background-color: #337ab7;
 }
 .toggle input:checked + .track{
-  background: lightcoral;
-  border-color: lightcoral;
+  background: #337ab7;
+  border-color: #337ab7;
 }
 .bar.bar-stable .title, .bar.bar-header .title {
   color: #ffffff;
@@ -49,12 +49,12 @@ ion-content{
   font-size: 12px;
 }
 .header-year-wrapper , .mb-datepicker table tbody tr.days .day-item:hover{
-  background: lightcoral;
+  background: #337ab7;
 }
 .day{
-  color: lightcoral !important;
+  color: #337ab7 !important;
 }
 .today{
-  background: lightcoral !important;
+  background: #337ab7 !important;
   opacity: .7;
 }
