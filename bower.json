@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "angular-thumbnail": "^0.1.2",
-    "angular-contenteditable": "^0.3.8"
+    "angular-contenteditable": "^0.3.8",
+    "less": "^2.7.2"
   }
 }

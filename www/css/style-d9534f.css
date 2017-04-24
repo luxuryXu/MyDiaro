@@ -1,0 +1,61 @@
+/* Empty. Add your own CSS if you like */
+*{
+  font-family: '微软雅黑';
+}
+.theme{
+  background: #d9534f !important;
+  color: #fff !important;
+}
+.themeWord{
+  color: #d9534f !important;
+}
+ion-content{
+  background: #f1f1f1;
+}
+.bar.bar-stable{
+  background-color: #d9534f;
+}
+.toggle input:checked + .track{
+  background: #d9534f;
+  border-color: #d9534f;
+}
+.bar.bar-stable .title, .bar.bar-header .title {
+  color: #ffffff;
+}
+.bar-stable .button.button-clear, .bar-header .button.button-clear {
+  color: #ffffff;
+}
+.save{
+  margin: 20px auto;
+  text-align: center;
+}
+.save button{
+  width: 80px;
+  height: 40px;
+  border: none;
+}
+/*date*/
+.mb-datepicker{
+  width: 100%;
+  margin-top: -34px;
+}
+.mb-datepicker table{
+  width: 100%;
+}
+.header-year , .header-month{
+  width: 50%;
+}
+.mb-datepicker table tbody tr td.day-head{
+  font-size: 12px;
+}
+.header-year-wrapper , .mb-datepicker table tbody tr.days .day-item:hover{
+  background: #d9534f;
+}
+.day{
+  color: #d9534f !important;
+}
+.today{
+  background: #d9534f !important;
+  opacity: .7;
+}
+
