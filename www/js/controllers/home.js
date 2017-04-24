@@ -1,15 +1,15 @@
 angular.module('starter.controllers')
   .controller('HomeCtrl',function($scope,$state,toolsService,$rootScope){
-    //if( !localStorage.user ){
-    //  toolsService.modal('login.html')
-    //    .then(function (modal) {
-    //      $scope.loginModal = modal;
-    //      modal.show();
-    //    })
-    //}
-    //$rootScope.$on('closeLogin' , function () {
-    //  $scope.loginModal.hide();
-    //})
+    if( !localStorage.user ){
+     toolsService.modal('login.html')
+       .then(function (modal) {
+         $scope.loginModal = modal;
+         modal.show();
+       })
+    }
+    $rootScope.$on('closeLogin' , function () {
+     $scope.loginModal.hide();
+    })
     //日记边框
     setTimeout(function () {
       var borderT = $('.borderT');

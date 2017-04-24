@@ -2,7 +2,7 @@
  * Created by Administrator on 2017/4/8.
  */
 angular.module('starter.controllers')
-.controller('LoginCtrl' , function ($scope , loginService , $ionicLoading , $rootScope) {
+.controller('LoginCtrl' , function ($scope , loginService , $ionicLoading , $rootScope , $ionicModal) {
     $scope.loginData = {
       userName:null,
       password:null
@@ -19,4 +19,18 @@ angular.module('starter.controllers')
           }
         });
     }
+
+    $scope.openRegister = function(){
+      $ionicModal.fromTemplateUrl('templates/registe.html',{
+        scope:$scope.$new(),
+        animation:'slide-in-up'
+      }).then(function (modal) {
+        modal.show();
+        $scope.registerModal = modal;
+      });
+    }
+    $scope.closeRegister = function () {
+      $scope.registerModal.hide();
+    }
+
 });
