@@ -3,12 +3,13 @@
     height:7rem;
     padding:0;
     color: #ffffff;
+    background: url("../img/MyDiaro.jpg") no-repeat top center;
 }
 #sideMenu .person .person-name {
     position: fixed;
     width: 100%;
     height: 2.4rem;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.3);
     padding:0.3rem 0;
 }
 #sideMenu .person .person-name .home , #sideMenu .person .person-name .setting{
@@ -57,7 +58,7 @@
     right: 0;
     bottom: 0;
     height: 1.2rem;
-    background: rgba(0,0,0,.2);
+    background: rgba(0,0,0,.3);
 }
 #sideMenu .person .quantity .total{
    position: absolute;

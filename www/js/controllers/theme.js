@@ -18,7 +18,7 @@ angular.module('starter.controllers')
 
   var $css = $('.style');
   $scope.changeTheme = function (color) {
-    console.log(color);
     $css.attr('href' , 'css/style-'+color+'.css');
+    //修改user的主题
   }
 })
