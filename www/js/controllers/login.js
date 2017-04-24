@@ -32,5 +32,17 @@ angular.module('starter.controllers')
     $scope.closeRegister = function () {
       $scope.registerModal.hide();
     }
+    $scope.openForgetPassword = function(){
+      $ionicModal.fromTemplateUrl('templates/forget-password.html',{
+        scope:$scope.$new(),
+        animation:'slide-in-up'
+      }).then(function (modal) {
+        modal.show();
+        $scope.forgetPasswordModal = modal;
+      });
+    }
+    $scope.closeForgetPassword = function(){
+      $scope.forgetPasswordModal.hide();
+    }
 
 });

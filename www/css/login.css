@@ -25,6 +25,6 @@ h4{
   padding-bottom: 0;
 }
 
-#register-view .register-back{
+#register-view .back , #forget-view .back{
   background: #ffffff;
 }

@@ -1,11 +1,13 @@
 angular.module('starter.controllers')
-  .controller('HomeCtrl',function($scope,$state,toolsService,$rootScope){
+  .controller('HomeCtrl',function($scope,$state,toolsService,$rootScope,$ionicModal){
     if( !localStorage.user ){
-     toolsService.modal('login.html')
-       .then(function (modal) {
-         $scope.loginModal = modal;
-         modal.show();
-       })
+     $ionicModal.fromTemplateUrl('templates/login.html' , {
+       scope:$scope.$new(),
+       animation:'slide-in-up'
+     }).then(function(modal){
+       modal.show();
+       $scope.loginModal = modal;
+     });
     }
     $rootScope.$on('closeLogin' , function () {
      $scope.loginModal.hide();
