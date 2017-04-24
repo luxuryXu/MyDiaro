@@ -143,3 +143,9 @@
 #sideMenu .date-wrap{
   background: #fff;
 }
+
+#sideMenu .attr-name span{
+  display: inline-block;
+  width: 12px;
+  margin-right: 5px;
+}

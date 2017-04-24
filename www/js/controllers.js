@@ -44,7 +44,15 @@ angular.module('starter.controllers', [])
   },100);
 
   $scope.isSlide = function(index){
-    $('.list>li').eq(index).find('.theme-list').slideToggle(100);
+    var item = $('.list>li').eq(index).find('.theme-list');
+    var icon = $('.list>li').eq(index).find('.attr-name i');
+    if(item.css('display')=='none'){
+      item.show();
+      icon.removeClass('ion-ios-arrow-right').addClass('ion-ios-arrow-down');
+    }else{
+      item.hide();
+      icon.removeClass('ion-ios-arrow-down').addClass('ion-ios-arrow-right');
+    }
   }
 
 
