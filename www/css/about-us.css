@@ -1,3 +1,6 @@
 #about-us-view ion-content{
   padding: 20px 10px;
 }
+#about-us-view p{
+  margin-top: 20px;
+}
