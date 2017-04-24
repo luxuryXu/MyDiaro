@@ -1,0 +1,24 @@
+#feedback-view .options{
+  display: box;
+  display: -webkit-box;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+#feedback-view .options>div{
+  box-flex: 1;
+  -webkit-box-flex: 1;
+}
+#feedback-view .textarea{
+  width: 100%;
+  min-height: 180px;
+  padding: 5px;
+  background: #fff;
+  outline: 0;
+  font-size: 14px;
+  line-height: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius:6px;
+  text-align:justify;
+}

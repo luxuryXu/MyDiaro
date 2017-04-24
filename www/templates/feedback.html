@@ -1,0 +1,11 @@
+<ion-view view-title="意见反馈" id=feedback-view>
+  <ion-content>
+    <div class="options">
+      <div ng-class="{'themeWord':feedback.type=='好评'}" ng-click=feedback.type='好评';>好评</div>
+      <div ng-class="{'themeWord':feedback.type=='建议'}" ng-click=feedback.type='建议';>建议</div>
+      <div ng-class="{'themeWord':feedback.type=='出错'}" ng-click=feedback.type='出错';>出错</div>
+    </div>
+    <div ng-model=feedback.content class="textarea" contenteditable="true"></div>
+    <div class="save"><button class="theme">提交</button></div>
+  </ion-content>
+</ion-view>

@@ -7,7 +7,7 @@
 angular.module('starter.controllers',[])
 angular.module('starter.services',[])
 angular.module('starter.directives',[])
-angular.module('starter', ['ionic', 'starter.controllers','starter.services','starter.directives','ui.thumbnail','materialDatePicker'])
+angular.module('starter', ['ionic', 'starter.controllers','starter.services','starter.directives','ui.thumbnail','materialDatePicker','contenteditable'])
 .run(function($ionicPlatform,$rootScope,$state) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -154,6 +154,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','st
         'menuContent': {
           templateUrl : 'templates/theme.html',
           controller: 'ThemeCtrl'
+        }
+      }
+    })
+
+    .state('app.feedback' , {
+      url :'/feedback',
+      views : {
+        'menuContent': {
+          templateUrl :'templates/feedback.html',
+          controller: 'FeedbackCtrl'
         }
       }
     })
