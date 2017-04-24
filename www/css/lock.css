@@ -1,3 +1,6 @@
 #lock-view .toggle{
   vertical-align: middle;
 }
+#lock-view .list p{
+  margin: 10px;
+}
