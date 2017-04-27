@@ -1,17 +1,8 @@
 angular.module('starter.controllers')
   .controller('HomeCtrl',function($scope,$state,toolsService,$rootScope,$ionicModal){
-    if( !localStorage.user ){
-     $ionicModal.fromTemplateUrl('templates/login.html' , {
-       scope:$scope.$new(),
-       animation:'slide-in-up'
-     }).then(function(modal){
-       modal.show();
-       $scope.loginModal = modal;
-     });
-    }
-    $rootScope.$on('closeLogin' , function () {
-     $scope.loginModal.hide();
-    })
+    var user = localStorage.user;
+
+
     //日记边框
     setTimeout(function () {
       var borderT = $('.borderT');
@@ -20,7 +11,7 @@ angular.module('starter.controllers')
         randomColor = toolsService.randomColor();
         $(borderT[i]).css('border-top-color' , randomColor);
       }
-    },200);
+    },0);
 
     $scope.name = $state.current.name;
 

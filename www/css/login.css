@@ -1,9 +1,10 @@
-#login-view ion-content , #register-view ion-content{
+#login-view ion-content , #register-view ion-content , #forget-view ion-content{
   background: #ffffff;
 }
 h4{
   position: absolute;
   width: 100%;
+  left: 0;
   text-align: center;
 }
 .input-label{
@@ -21,7 +22,7 @@ h4{
   float: right;
 }
 .login{
-  border: none;
+  border-bottom: none;
   padding-bottom: 0;
 }
 

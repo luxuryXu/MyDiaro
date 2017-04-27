@@ -8,6 +8,10 @@ angular.module('starter.controllers')
       password:null
     };
     $scope.doLogin = function () {
+      var color = '000000';
+      var $css = $('.style');
+      $css.attr('href' , 'css/style-'+color+'.css');
+      $rootScope.loginModal.hide();
       loginService.login($scope.loginData)
         .then(function (response) {
           if(response.data != 0){

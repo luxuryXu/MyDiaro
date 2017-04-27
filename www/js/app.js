@@ -8,7 +8,7 @@ angular.module('starter.controllers',[])
 angular.module('starter.services',[])
 angular.module('starter.directives',[])
 angular.module('starter', ['ionic', 'starter.controllers','starter.services','starter.directives','ui.thumbnail','materialDatePicker','contenteditable'])
-.run(function($ionicPlatform,$rootScope,$state) {
+.run(function($ionicPlatform,$rootScope,$state,$ionicModal) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,9 +21,17 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','st
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-    $rootScope.theme = '#337ab7';
   });
 
+  if( !localStorage.user ){
+    $ionicModal.fromTemplateUrl('templates/login.html' , {
+      scope:$rootScope.$new(),
+      animation:'slide-in-up'
+    }).then(function(modal){
+      modal.show();
+      $rootScope.loginModal = modal;
+    });
+  }
 })
 
 
