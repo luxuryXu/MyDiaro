@@ -1,8 +1,5 @@
 angular.module('starter.controllers')
   .controller('HomeCtrl',function($scope,$state,toolsService,$rootScope,$ionicModal){
-    var user = localStorage.user;
-
-
     //日记边框
     setTimeout(function () {
       var borderT = $('.borderT');
