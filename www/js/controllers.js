@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout , toolsService) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout , $rootScope, toolsService) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -60,4 +60,19 @@ angular.module('starter.controllers', [])
     {id:2,name:'爱情'},
     {id:3,name:'商业'}
   ];
+
+  $scope.addType = function(){
+    $ionicModal.fromTemplateUrl('templates/add-type.html',{
+      scope:$scope.$new(),
+      animation:'slide-in-up'
+    })
+      .then(function(modal){
+        $scope.addModal = modal;
+        modal.show();
+      });
+  }
+
+  $rootScope.$on('close' , function(){
+    $scope.addModal.hide();
+  })
 })

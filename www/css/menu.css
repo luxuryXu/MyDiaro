@@ -97,6 +97,12 @@
   font-size: 1.4rem;
   border-right: 1px solid #fff;
 }
+#sideMenu .menuList .list>li .plus{
+  border-right: none;
+  position: absolute;
+  right: 0;
+  border-left: 1px solid #ffffff;
+}
 #sideMenu .menuList .list>li .attr-name{
   height: 1.8rem;
   line-height: 1.8rem;
