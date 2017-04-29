@@ -1,0 +1,13 @@
+#notice-view .head{
+  height: 30px;
+  line-height: 30px;
+}
+#notice-view i{
+  font-size: 12px;
+}
+#notice-view .head-left{
+  float: left;
+}
+#notice-view .head-right{
+  float: right;
+}
