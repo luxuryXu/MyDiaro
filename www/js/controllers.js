@@ -67,12 +67,43 @@ angular.module('starter.controllers', [])
       animation:'slide-in-up'
     })
       .then(function(modal){
-        $scope.addModal = modal;
+        $scope.addTypeModal = modal;
+        modal.show();
+      });
+  }
+
+  $scope.addTag = function(){
+    $ionicModal.fromTemplateUrl('templates/add-tag.html',{
+      scope:$scope.$new(),
+      animation:'slide-in-up'
+    })
+      .then(function(modal){
+        $scope.addTagModal = modal;
+        modal.show();
+      });
+  }
+
+  $scope.addLocation = function(){
+
+    $ionicModal.fromTemplateUrl('templates/add-location.html',{
+      scope:$scope.$new(),
+      animation:'slide-in-up'
+    })
+      .then(function(modal){
+        $scope.addLocationModal = modal;
         modal.show();
       });
   }
 
   $rootScope.$on('close' , function(){
-    $scope.addModal.hide();
+    if($scope.addTypeModal){
+      $scope.addTypeModal.hide();
+    }
+    if($scope.addTagModal){
+      $scope.addTagModal.hide();
+    }
+    if($scope.addLocationModal){
+      $scope.addLocationModal.hide();
+    }
   })
 })

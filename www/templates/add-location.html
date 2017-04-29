@@ -1,0 +1,16 @@
+<ion-modal-view class=add-view ng-controller=AddLocationCtrl>
+  <ion-nav-bar class="theme">
+    <ion-nav-buttons side=left>
+      <span ng-click=close();>取消</span>
+    </ion-nav-buttons>
+    <ion-nav-title style="text-align: center;">添加地点</ion-nav-title>
+    <ion-nav-buttons side=right>
+      <span ng-click=doAdd();>确定</span>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content style="top: 44px;">
+    <div class="add-text">
+      <input type="text" placeholder="位置名称">
+    </div>
+  </ion-content>
+</ion-modal-view>
