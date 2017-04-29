@@ -48,7 +48,7 @@
           <div class="theme-title" ng-click="isSlide(1);">
             <div class="attr-icon"><i class="ion-ios-keypad-outline"></i></div>
             <div class="attr-name"><span><i class="ion-ios-arrow-down"></i></span>分类</div>
-            <div class="attr-icon plus" ng-click=addType(); menu-close><i class="ion-ios-plus-empty"></i></div>
+            <div class="attr-icon plus" ng-click=addType($event); menu-close><i class="ion-ios-plus-empty"></i></div>
           </div>
           <ul class="theme-list">
             <li class="borderC" ng-repeat="type in types" ng-class="{'active':selectedType==type.name}">
@@ -61,7 +61,7 @@
           <div class="theme-title" ng-click="isSlide(2);">
             <div class="attr-icon"><i class="ion-ios-keypad-outline"></i></div>
             <div class="attr-name"><span><i class="ion-ios-arrow-down"></i></span>标签</div>
-            <div class="attr-icon plus" ng-click=addTag(); menu-close><i class="ion-ios-plus-empty"></i></div>
+            <div class="attr-icon plus" ng-click=addTag($event); menu-close><i class="ion-ios-plus-empty"></i></div>
           </div>
           <ul class="theme-list">
             <li class="borderC">
@@ -82,7 +82,7 @@
           <div class="theme-title" ng-click="isSlide(3);">
             <div class="attr-icon"><i class="ion-ios-keypad-outline"></i></div>
             <div class="attr-name"><span><i class="ion-ios-arrow-down"></i></span>地点</div>
-            <div class="attr-icon plus" ng-click=addLocation(); menu-close><i class="ion-ios-plus-empty"></i></div>
+            <div class="attr-icon plus" ng-click=addLocation($event); menu-close><i class="ion-ios-plus-empty"></i></div>
           </div>
           <ul class="theme-list">
             <li>

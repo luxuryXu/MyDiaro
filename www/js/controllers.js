@@ -61,7 +61,8 @@ angular.module('starter.controllers', [])
     {id:3,name:'商业'}
   ];
 
-  $scope.addType = function(){
+  $scope.addType = function($event){
+    $event.stopPropagation();
     $ionicModal.fromTemplateUrl('templates/add-type.html',{
       scope:$scope.$new(),
       animation:'slide-in-up'
@@ -72,7 +73,8 @@ angular.module('starter.controllers', [])
       });
   }
 
-  $scope.addTag = function(){
+  $scope.addTag = function($event){
+    $event.stopPropagation();
     $ionicModal.fromTemplateUrl('templates/add-tag.html',{
       scope:$scope.$new(),
       animation:'slide-in-up'
@@ -83,8 +85,8 @@ angular.module('starter.controllers', [])
       });
   }
 
-  $scope.addLocation = function(){
-
+  $scope.addLocation = function($event){
+    $event.stopPropagation();
     $ionicModal.fromTemplateUrl('templates/add-location.html',{
       scope:$scope.$new(),
       animation:'slide-in-up'
