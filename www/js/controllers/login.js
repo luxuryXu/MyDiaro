@@ -4,7 +4,7 @@
 angular.module('starter.controllers')
 .controller('LoginCtrl' , function ($scope , loginService , $ionicLoading , $rootScope , $ionicModal) {
     $scope.loginData = {
-      userName:null,
+      username:null,
       password:null
     };
     $scope.doLogin = function () {

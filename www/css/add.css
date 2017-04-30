@@ -11,3 +11,11 @@
   padding-left: 8px;
   background: #f1f1f1;
 }
+.add-view button{
+  background: none;
+  border: none;
+  color: #ffffff;
+}
+.add-view button[disabled]{
+  color: #cccccc;
+}

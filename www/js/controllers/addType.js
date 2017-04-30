@@ -3,10 +3,7 @@
  */
 angular.module('starter.controllers')
 .controller('AddTypeCtrl' , function($scope){
-  $scope.newType = '';
-  $scope.doAdd = function(){
-    console.log($scope.newType);
+  $scope.type = null;
+  $scope.addType = function(){
   }
-
-
 });
