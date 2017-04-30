@@ -3,7 +3,7 @@
  */
 angular.module('starter.controllers')
 .controller('SelectTypeCtrl' , function($scope,$ionicModal){
-  $scope.$on('addType' , function(){
+  $scope.addType = function(){
     $ionicModal.fromTemplateUrl('templates/add-type.html',{
       scope:$scope.$new(),
       animation:'slide-in-up'
@@ -12,8 +12,7 @@ angular.module('starter.controllers')
         $scope.addTypeModal = modal;
         modal.show();
       });
-  });
-
+  }
   $scope.$on('closeAdd' , function(){
     $scope.addTypeModal.hide();
   })
