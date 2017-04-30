@@ -1,3 +1,6 @@
+#write-view ion-content{
+  background: #ffffff;
+}
 #write-view .time{
   height: 40px;
   line-height: 40px;
@@ -22,18 +25,39 @@
 }
 #write-view .title>input{
   width: 100%;
-  background: #d1d3d6;
+  background: #f1f1f1;
   padding-left: 5px;
 }
 #write-view .content{
-  padding: 0 5px 5px 5px;
+  margin: 0 5px 5px 5px;
 }
-#write-view .content>textarea{
-  width: 100%;
+#write-view .content{
   min-height: 100px;
-  background: #d1d3d6;
+  background: #f1f1f1;
   padding: 8px 5px;
   line-height: 20px;
   resize: none;
   overflow-y: visible;
+}
+#write-view .select{
+  margin: 0px 5px 8px;
+  height: 34px;
+  line-height: 34px;
+  color: #666666;
+}
+#write-view .select span{
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+  height: 34px;
+  vertical-align: middle;
+  font-size: 12px;
+}
+#write-view i.large{
+  font-size: 16px;
+}
+#write-view .select input{
+  display: inline-block;
+  width: 80%;
+  background: none;
 }

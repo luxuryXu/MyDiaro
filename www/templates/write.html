@@ -5,6 +5,15 @@
             <a><i class="ion-clock"></i><span>21:59</span></a>
         </div>
       <div class="title"><input type="text" placeholder="输入标题" /></div>
-      <div class="content"><textarea></textarea></div>
+      <div class="content" contenteditable="true"></div>
+      <div class="select" ng-click=selectType();>
+          <span><i class="ion-ios-folder"></i></span><input type="text" readonly placeholder="选择分类">
+      </div>
+      <div class="select" ng-click=selectTag();>
+        <span><i class="ion-ios-pricetag"></i></span><input type="text" readonly placeholder="选择标签">
+      </div>
+      <div class="select" ng-click=selectLocation();>
+        <span><i class="ion-location large"></i></span><input type="text" readonly placeholder="选择地点">
+      </div>
     </ion-content>
 </ion-view>
