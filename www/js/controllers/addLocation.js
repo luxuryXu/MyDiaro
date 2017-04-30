@@ -6,10 +6,4 @@
  */
 angular.module('starter.controllers')
   .controller('AddLocationCtrl' , function($scope,$rootScope){
-    $scope.close = function(){
-      $rootScope.$broadcast('close',{});
-    }
-    $scope.doAdd = function(){
-      alert(1);
-    }
   });

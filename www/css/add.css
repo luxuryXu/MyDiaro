@@ -1,9 +1,5 @@
 .add-view ion-content{
-  color: #ffffff;
   background: #ffffff;
-}
-.add-view .left-buttons,.add-view .right-buttons{
-  line-height: 34px;
 }
 .add-view .add-text{
   height: 44px;

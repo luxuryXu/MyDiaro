@@ -97,7 +97,7 @@ angular.module('starter.controllers', [])
       });
   }
 
-  $rootScope.$on('close' , function(){
+  $rootScope.$on('closeAdd' , function(){
     if($scope.addTypeModal){
       $scope.addTypeModal.hide();
     }
