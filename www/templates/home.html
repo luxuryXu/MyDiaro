@@ -8,6 +8,8 @@
   <div class="first-time">二月,2017</div>
   <ion-content>
     <my-diary ng-model=myDiary ng-repeat="myDiary in myDiaries"></my-diary>
+    <p class="more" ng-if=totalPages!=currentPage ng-click=more();><button>加载更多</button></p>
+    <p class="more" ng-if=totalPages==currentPage><button>我是有底线的</button></p>
   </ion-content>
   <div ng-include="'templates/bottom-nav.html'"></div>
 </ion-view>

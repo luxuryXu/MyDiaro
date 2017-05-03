@@ -1,9 +1,9 @@
 <ion-view view-title="资料修改" id=dataModify-view>
   <ion-content scroll="false">
       <div class="user-name">昵称</div>
-      <div class="modify-name"><input type="text"/></div>
+      <div class="modify-name"><input type="text" ng-model=user.nickName /></div>
       <div class="user-words">个性签名</div>
-      <div class="modify-words"><textarea></textarea></div>
+      <div class="modify-words"><textarea ng-model=user.sign ></textarea></div>
       <div class="save"><button class="theme">保存</button></div>
   </ion-content>
 </ion-view>

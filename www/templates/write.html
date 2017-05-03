@@ -25,7 +25,8 @@
           </label>
         </li>
       </ul>
-      <div>{{diary}}</div>
-      <div class="save"><button class="theme" ng-click=save();>确定</button></div>
+      <div class="save"><button class="theme" ng-click=save();
+        ng-disabled=!diary.content||!diary.type||!diary.tag||!diary.location
+      >确定</button></div>
     </ion-content>
 </ion-view>

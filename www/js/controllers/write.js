@@ -2,14 +2,16 @@
  * Created by Administrator on 2017/3/13.
  */
 angular.module('starter.controllers')
-.controller('WriteCtrl' , function($scope,$ionicModal,$http,$rootScope,$ionicLoading){
-  $scope.diary = {};
-  $scope.diary.now = getNowFormatDate();
-  setInterval(function () {
+.controller('WriteCtrl' , function($scope,$ionicModal,$http,$rootScope,$ionicLoading,$state){
+  $scope.user = JSON.parse(localStorage.user);
+  $scope.$on('$ionicView.enter',function () {
+    $scope.diary = {};
     $scope.diary.now = getNowFormatDate();
-    $scope.$apply();
-  },1000);
-  // console.log(new Date($scope.diary.now).getTime());
+    setInterval(function () {
+      $scope.diary.now = getNowFormatDate();
+      $scope.$apply();
+    },1000);
+  });
   $scope.selectType = function(){
     $ionicModal.fromTemplateUrl('templates/select-type.html',{
       scope:$scope.$new(),
@@ -63,29 +65,29 @@ angular.module('starter.controllers')
     $scope.diary.tag = data;
   })
 
+  function checkTime(n) {
+    return n>10?n:'0'+n;
+  }
+
   function getNowFormatDate() {
     var date = new Date();
     var seperator1 = "-";
     var seperator2 = ":";
     var month = date.getMonth() + 1;
     var strDate = date.getDate();
-    if (month >= 1 && month <= 9) {
-      month = "0" + month;
-    }
-    if (strDate >= 0 && strDate <= 9) {
-      strDate = "0" + strDate;
-    }
-
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    var sec = date.getSeconds();
+    month = checkTime(month);
+    strDate = checkTime(strDate);
+    hour = checkTime(hour);
+    min = checkTime(min);
+    sec = checkTime(sec);
     var currentDate = date.getFullYear() + seperator1 + month + seperator1 + strDate
-      + "    " + date.getHours() + seperator2 + date.getMinutes()
-      + seperator2 + date.getSeconds();
+      + "    " + hour + seperator2 + min
+      + seperator2 + sec;
     return currentDate;
   }
-
-  $scope.user = JSON.parse(localStorage.user);
-  $rootScope.$on('refresh' , function () {
-    $scope.user = JSON.parse(localStorage.user);
-  });
 
   $scope.save = function () {
     var d = {
@@ -93,9 +95,9 @@ angular.module('starter.controllers')
       content:$scope.diary.content,
       pictures:$scope.diary.pictures,
       time:new Date($scope.diary.now).getTime(),
-      typeId:$scope.diary.type.id,
-      tagId:$scope.diary.tag.id,
-      location:$scope.diary.location.id,
+      type:$scope.diary.type,
+      tag:$scope.diary.tag,
+      location:$scope.diary.location,
       open:$scope.diary.open?1:0,
       loves:0,
       collects:0,
@@ -106,8 +108,10 @@ angular.module('starter.controllers')
       method:'POST',
       url:'/default/diary/save',
       data:d
-    }).then(function (res) {
-      console.log(res);
+    }).then(function () {
+      $ionicLoading.show({template:'保存成功',duration:1000});
+      $rootScope.$broadcast('getDiaries',{});
+      $state.go('app.home');
     },function (err) {
       $ionicLoading.show({template:err.data.message,duration:1000});
     });

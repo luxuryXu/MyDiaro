@@ -7,12 +7,12 @@
     </div>
     <div class="diary-content">
       <div class="diary-title">{{ngModel.title}}</div>
-      <div class="diary-main">正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</div>
+      <div class="diary-main" ng-bind-html=ngModel.content></div>
     </div>
   </div>
-  <div class="diary-img">
-    <img src="img/ionic.png" width="100%"/>
-  </div>
+  <!--<div class="diary-img">-->
+    <!--&lt;!&ndash;<img ng-src=ngModel.pictures[0] width="100%"/>&ndash;&gt;-->
+  <!--</div>-->
   <div class="diary-type">
     <span><i class="ion-ios-folder"></i> Love</span>
     <span><i class="ion-ios-pricetag"></i> 2</span>
