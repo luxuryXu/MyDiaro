@@ -53,7 +53,7 @@
           <ul class="theme-list">
             <li class="borderC" ng-repeat="type in types" ng-class="{'active':selectedType==type.name}">
               <div class="type-title">{{type.name}}</div>
-              <div class="type-num">2</div>
+              <div class="type-num">{{types.length}}</div>
             </li>
           </ul>
         </li>
@@ -64,17 +64,9 @@
             <div class="attr-icon plus" ng-click=addTag($event); menu-close><i class="ion-ios-plus-empty"></i></div>
           </div>
           <ul class="theme-list">
-            <li class="borderC">
-              <div class="type-title">未分类</div>
-              <div class="type-num">2</div>
-            </li>
-            <li class="borderC">
-              <div class="type-title">未分类</div>
-              <div class="type-num">2</div>
-            </li>
-            <li>
-              <div class="type-title">未分类</div>
-              <div class="type-num">2</div>
+            <li class="borderC" ng-repeat="tag in tags">
+              <div class="type-title">{{tag.name}}</div>
+              <div class="type-num">{{tags.length}}</div>
             </li>
           </ul>
         </li>
@@ -85,17 +77,9 @@
             <div class="attr-icon plus" ng-click=addLocation($event); menu-close><i class="ion-ios-plus-empty"></i></div>
           </div>
           <ul class="theme-list">
-            <li>
-              <div class="type-title">未分类</div>
-              <div class="type-num">2</div>
-            </li>
-            <li>
-              <div class="type-title">未分类</div>
-              <div class="type-num">2</div>
-            </li>
-            <li>
-              <div class="type-title">未分类</div>
-              <div class="type-num">2</div>
+            <li class="borderC" ng-repeat="location in locations">
+              <div class="type-title">{{location.name}}</div>
+              <div class="type-num">{{locations.length}}</div>
             </li>
           </ul>
         </li>

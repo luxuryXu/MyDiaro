@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout , $rootScope, toolsService) {
+.controller('AppCtrl', function($scope, $ionicModal,$http, $timeout , $rootScope, $ionicLoading,toolsService) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -55,11 +55,34 @@ angular.module('starter.controllers', [])
     }
   }
 
-  $scope.types = [
-    {id:1,name:'朋友'},
-    {id:2,name:'爱情'},
-    {id:3,name:'商业'}
-  ];
+  $scope.user = JSON.parse(localStorage.user);
+  $rootScope.$on('refresh' , function () {
+    $scope.user = JSON.parse(localStorage.user);
+  });
+  getData($scope.user.id);
+
+  function getData(id) {
+    $http.get('/default/user/type/list?userId=' + id)
+      .then(function (response) {
+        $scope.types = response.data;
+      },function (err) {
+        $ionicLoading.show({template:err.data.message,duration:1000});
+      });
+    $http.get('/default/user/tag/list?userId=' + id)
+      .then(function (response) {
+        $scope.tags = response.data;
+      },function (err) {
+        $ionicLoading.show({template:err.data.message,duration:1000});
+      });
+    $http.get('/default/user/location/list?userId=' + id)
+      .then(function (response) {
+        $scope.locations = response.data;
+      },function (err) {
+        $ionicLoading.show({template:err.data.message,duration:1000});
+      });
+  }
+
+
 
   $scope.addType = function($event){
     $event.stopPropagation();
