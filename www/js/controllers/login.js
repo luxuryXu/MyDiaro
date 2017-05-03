@@ -2,25 +2,33 @@
  * Created by Administrator on 2017/4/8.
  */
 angular.module('starter.controllers')
-.controller('LoginCtrl' , function ($scope , loginService , $ionicLoading , $rootScope , $ionicModal) {
-    $scope.loginData = {
-      username:null,
-      password:null
-    };
+.controller('LoginCtrl' , function ($scope , loginService , $ionicLoading , $rootScope , $ionicModal , $state) {
     $scope.doLogin = function () {
-      var color = '000000';
-      var $css = $('.style');
-      $css.attr('href' , 'css/style-'+color+'.css');
-      $rootScope.loginModal.hide();
+      // var color = '000000';
+      // var $css = $('.style');
+      // $css.attr('href' , 'css/style-'+color+'.css');
+      // $rootScope.loginModal.hide();
       loginService.login($scope.loginData)
         .then(function (response) {
-          if(response.data != 0){
-              localStorage.user = response.data;
-              $rootScope.$broadcast('closeLogin',{});
-              window.location.href = '#/app/home';
-          }else{
-              $ionicLoading.show({template:'用户名或密码错误',duration:2000});
-          }
+            localStorage.user = JSON.stringify(response.data);
+          $ionicLoading.show({template:'登录成功',duration:1000})
+            .then(function () {
+              $rootScope.loginModal.hide();
+            });
+        },function (err) {
+          $ionicLoading.show({template:err.data.message,duration:1000});
+        });
+    }
+
+    $scope.doRegister = function () {
+      loginService.register($scope.register)
+        .then(function (response) {
+          localStorage.user = JSON.stringify(response.data);
+          $ionicLoading.show({template:'注册成功',duration:1000});
+          $scope.registerModal.hide();
+          $rootScope.loginModal.hide();
+        },function (err) {
+          $ionicLoading.show({template:err.data.message,duration:1000});
         });
     }
 

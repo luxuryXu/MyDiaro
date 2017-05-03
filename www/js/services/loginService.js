@@ -7,9 +7,17 @@ angular.module('starter.services')
     login: function (loginData) {
       return $http({
         method:'post',
-        url:'/default/userLogin',
+        url:'/default/root/login',
         headers:{'Content-Type': 'application/x-www-form-urlencoded'},
-        data:$.param(loginData)
+        data: $.param(loginData)
+      })
+    },
+    register: function (registerData) {
+      return $http({
+        method:'POST',
+        url: '/default/root/register',
+        headers:{'Content-Type': 'application/x-www-form-urlencoded'},
+        data: $.param(registerData)
       })
     }
   }

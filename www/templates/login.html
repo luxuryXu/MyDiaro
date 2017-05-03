@@ -7,14 +7,14 @@
       <div class="list">
         <label class="item item-input">
           <span class="input-label">用户名</span>
-          <input type="text" ng-model="loginData.username">
+          <input type="text" ng-model="$parent.loginData.phone">
         </label>
         <label class="item item-input">
           <span class="input-label">密码</span>
-          <input type="password" ng-model="loginData.password">
+          <input type="password" ng-model="$parent.loginData.password">
         </label>
         <label class="item login">
-          <button class="button button-block button-positive" type="submit">登 录</button>
+          <button class="button button-block button-positive" ng-disabled=!$parent.loginData.password||!$parent.loginData.password type="submit">登 录</button>
         </label>
         <div class="others">
           <a ng-click=openRegister();>注册</a>

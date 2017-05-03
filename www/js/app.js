@@ -23,15 +23,15 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','st
     }
   });
 
-  // if( !localStorage.user ){
-  //   $ionicModal.fromTemplateUrl('templates/login.html' , {
-  //     scope:$rootScope.$new(),
-  //     animation:'slide-in-up'
-  //   }).then(function(modal){
-  //     modal.show();
-  //     $rootScope.loginModal = modal;
-  //   });
-  // }
+  if( !localStorage.user ){
+    $ionicModal.fromTemplateUrl('templates/login.html' , {
+      scope:$rootScope.$new(),
+      animation:'slide-in-up'
+    }).then(function(modal){
+      modal.show();
+      $rootScope.loginModal = modal;
+    });
+  }
 })
 
 

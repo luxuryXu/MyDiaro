@@ -8,18 +8,18 @@
       <div class="list">
         <label class="item item-input">
           <span class="input-label">手机号</span>
-          <input type="text" ng-model="loginData.username">
+          <input type="text" ng-model="$parent.register.phone">
         </label>
         <label class="item item-input">
           <span class="input-label">密码</span>
-          <input type="password" ng-model="loginData.password">
+          <input type="password" ng-model="$parent.register.password">
         </label>
         <label class="item item-input">
           <span class="input-label">确认密码</span>
-          <input type="password" ng-model="loginData.password">
+          <input type="password" ng-model="$parent.register.confirmPassword">
         </label>
         <label class="item login">
-          <button class="button button-block button-positive" type="submit">注 册</button>
+          <button class="button button-block button-positive" ng-disabled=!$parent.register.phone||!$parent.register.password||!$parent.register.confirmPassword||$parent.register.password!=$parent.register.confirmPassword type="submit">注 册</button>
         </label>
       </div>
     </form>
