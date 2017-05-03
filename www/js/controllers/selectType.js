@@ -3,6 +3,11 @@
  */
 angular.module('starter.controllers')
 .controller('SelectTypeCtrl' , function($scope,$ionicModal){
+  $scope.types = [
+    {id:1,name:'type1',num:6},
+    {id:2,name:'type2',num:3},
+    {id:3,name:'type3',num:4}
+  ];
   $scope.addType = function(){
     $ionicModal.fromTemplateUrl('templates/add-type.html',{
       scope:$scope.$new(),

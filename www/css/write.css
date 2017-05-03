@@ -61,3 +61,7 @@
   width: 80%;
   background: none;
 }
+#write-view .item{
+  border: none;
+  color: #666;
+}

@@ -5,8 +5,11 @@
     <span class="modal-plus" ng-click=addType();><i class="ion-ios-plus-empty"></i></span>
   </div>
   <ion-content style="top: 44px;">
-      <ul>
-        <li>123</li>
-      </ul>
+    <ul class="theme-list">
+      <li ng-repeat="type in types" ng-click=$emit('selectType',type); >
+        <div class="type-title">{{type.name}}</div>
+        <div class="type-num">{{type.num}}</div>
+      </li>
+    </ul>
   </ion-content>
 </ion-modal-view>

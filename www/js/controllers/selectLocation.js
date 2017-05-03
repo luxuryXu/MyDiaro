@@ -3,6 +3,11 @@
  */
 angular.module('starter.controllers')
   .controller('SelectLocationCtrl' , function($scope,$ionicModal){
+      $scope.locations = [
+        {id:1,name:'Business',num:2},
+        {id:2,name:'Friends',num:5},
+        {id:3,name:'Love',num:12}
+      ];
       $scope.addLocation = function(){
         $ionicModal.fromTemplateUrl('templates/add-location.html',{
           scope:$scope.$new(),

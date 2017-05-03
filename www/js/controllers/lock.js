@@ -9,11 +9,13 @@ angular.module('starter.controllers')
   $scope.changePrivacy = function(privacy){
     //修改当前用户的privacy属性
     if(privacy){
-      toolsService.modal('privacy.html')
-          .then(function (modal) {
-            $scope.loginModal = modal;
-            modal.show();
-      });
+      $ionicModal.fromTemplateUrl('templates/privacy.html',{
+        scope:$scope.$new(),
+        animation:'slide-in-up'
+      })
+        .then(function(modal){
+
+        });
     }
   }
 });

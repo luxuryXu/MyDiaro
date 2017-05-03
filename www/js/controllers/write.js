@@ -43,15 +43,21 @@ angular.module('starter.controllers')
       $scope.selectLocationModal.hide();
   })
 
-  $rootScope.$on('close' , function(){
-    if($scope.addTypeModal){
-      $scope.addTypeModal.hide();
-    }
-    if($scope.addTagModal){
-      $scope.addTagModal.hide();
-    }
-    if($scope.addLocationModal){
-      $scope.addLocationModal.hide();
-    }
+  $scope.$on('selectLocation' , function(event,data){
+    $scope.selectLocationModal.hide();
+    $scope.location = data;
   })
+  $scope.$on('selectType' , function(event,data){
+    $scope.selectTypeModal.hide();
+    $scope.type = data;
+  })
+  $scope.$on('selectTag' , function(event,data){
+    $scope.selectTagModal.hide();
+    $scope.tag = data;
+  })
+  $scope.public = true;
+  $scope.changePublic = function(public){
+    $scope
+    alert($scope.public);
+  }
 })

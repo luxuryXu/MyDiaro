@@ -7,13 +7,23 @@
       <div class="title"><input type="text" placeholder="输入标题" /></div>
       <div class="content" contenteditable="true"></div>
       <div class="select" ng-click=selectType();>
-          <span><i class="ion-ios-folder"></i></span><input type="text" readonly placeholder="选择分类">
+          <span><i class="ion-ios-folder"></i></span><input type="text" ng-model=type.name readonly placeholder="选择分类">
       </div>
       <div class="select" ng-click=selectTag();>
-        <span><i class="ion-ios-pricetag"></i></span><input type="text" readonly placeholder="选择标签">
+        <span><i class="ion-ios-pricetag"></i></span><input type="text" ng-model=tag.name readonly placeholder="选择标签">
       </div>
       <div class="select" ng-click=selectLocation();>
-        <span><i class="ion-location large"></i></span><input type="text" readonly placeholder="选择地点">
+        <span><i class="ion-location large"></i></span><input type="text" ng-model=location.name readonly placeholder="选择地点">
       </div>
+      <ul>
+        <li class="item item-toggle">同步至过客
+          <label class="toggle">
+            <input ng-model=public ng-change=changePublic(public); type="checkbox">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+      </ul>
     </ion-content>
 </ion-view>
