@@ -7,12 +7,16 @@ angular.module('starter.controllers')
     $rootScope.$on('refresh' , function () {
       $scope.user = JSON.parse(localStorage.user);
     });
-    $http.get('/default/user/location/list?userId=' + $scope.user.id)
-      .then(function (response) {
-        $scope.locations = response.data;
-      },function (err) {
-        $ionicLoading.show({template:err.data.message,duration:1000});
-      });
+    getLocations($scope.user.id);
+    function getLocations(id) {
+      $http.get('/default/user/location/list?userId=' + id)
+        .then(function (response) {
+          $scope.locations = response.data;
+        },function (err) {
+          $ionicLoading.show({template:err.data.message,duration:1000});
+        });
+    }
+
       $scope.addLocation = function(){
         $ionicModal.fromTemplateUrl('templates/add-location.html',{
           scope:$scope.$new(),
@@ -26,5 +30,6 @@ angular.module('starter.controllers')
 
       $scope.$on('closeAdd' , function(){
         $scope.addLocationModal.hide();
+        getLocations($scope.user.id);
       });
   });
