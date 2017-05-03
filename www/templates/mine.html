@@ -2,8 +2,8 @@
   <ion-content style="bottom: 49px;">
     <div class="mine-info">
       <div class="mine-head" ng-click="showHeadList();"></div>
-      <p class="mine-name">赏金猎人的男朋友</p>
-      <p class="mine-words">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+      <p class="mine-name">{{user.nickName==null?'新用户':user.nickName}}</p>
+      <p class="mine-words">{{user.sign==null?'简单精致，记录生活。':user.sign}}</p>
     </div>
     <div class="list">
       <div class="item item-divider themeWord">
@@ -44,7 +44,7 @@
       </a>
     </div>
     <div class="loginOut">
-      <button class="button button-assertive">
+      <button class="button button-assertive" ng-click=signOut();>
         退出登录
       </button>
     </div>

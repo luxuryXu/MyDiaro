@@ -11,10 +11,11 @@ angular.module('starter.controllers')
       loginService.login($scope.loginData)
         .then(function (response) {
             localStorage.user = JSON.stringify(response.data);
-          $ionicLoading.show({template:'登录成功',duration:1000})
+            $ionicLoading.show({template:'登录成功',duration:1000})
             .then(function () {
               $rootScope.loginModal.hide();
             });
+            $rootScope.$broadcast('refresh',{});
         },function (err) {
           $ionicLoading.show({template:err.data.message,duration:1000});
         });

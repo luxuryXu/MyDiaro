@@ -4,6 +4,15 @@
 angular.module('starter.controllers')
 .controller('MineCtrl' , function($scope,$ionicModal,$rootScope,$state,$ionicLoading){
   $scope.name = $state.current.name;
+  $rootScope.$on('refresh' , function () {
+    $scope.user = JSON.parse(localStorage.user);
+  });
+  $scope.user = JSON.parse(localStorage.user);
+  $scope.signOut = function () {
+    localStorage.removeItem('user');
+    $rootScope.loginModal.show();
+  }
+
   //photo
   $scope.showHeadList = function(){
     var scope = $scope.$new();
