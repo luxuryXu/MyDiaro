@@ -1,29 +1,31 @@
 <ion-view view-title="写日记" id=write-view>
     <ion-content>
         <div class="time">
-            <a><i class="ion-calendar"></i><span>13 星期一 / 3月 2017</span></a>
-            <a><i class="ion-clock"></i><span>21:59</span></a>
+            <a><i class="ion-calendar"></i><span contenteditable="true" ng-model=diary.now></span></a>
+            <!--<a><i class="ion-clock"></i><span>21:59</span></a>-->
         </div>
-      <div class="title"><input type="text" placeholder="输入标题" /></div>
-      <div class="content" contenteditable="true"></div>
+      <div class="title"><input ng-model=diary.title type="text" placeholder="输入标题" /></div>
+      <div class="content" ng-model=diary.content contenteditable="true"></div>
       <div class="select" ng-click=selectType();>
-          <span><i class="ion-ios-folder"></i></span><input type="text" ng-model=type.name readonly placeholder="选择分类">
+          <span><i class="ion-ios-folder"></i></span><input type="text" ng-model=diary.type.name readonly placeholder="选择分类">
       </div>
       <div class="select" ng-click=selectTag();>
-        <span><i class="ion-ios-pricetag"></i></span><input type="text" ng-model=tag.name readonly placeholder="选择标签">
+        <span><i class="ion-ios-pricetag"></i></span><input type="text" ng-model=diary.tag.name readonly placeholder="选择标签">
       </div>
       <div class="select" ng-click=selectLocation();>
-        <span><i class="ion-location large"></i></span><input type="text" ng-model=location.name readonly placeholder="选择地点">
+        <span><i class="ion-location large"></i></span><input type="text" ng-model=diary.location.name readonly placeholder="选择地点">
       </div>
       <ul>
         <li class="item item-toggle">同步至过客
           <label class="toggle">
-            <input ng-model=public ng-change=changePublic(public); type="checkbox">
+            <input ng-model=diary.open type="checkbox">
             <div class="track">
               <div class="handle"></div>
             </div>
           </label>
         </li>
       </ul>
+      <div>{{diary}}</div>
+      <div class="save"><button class="theme" ng-click=save();>确定</button></div>
     </ion-content>
 </ion-view>

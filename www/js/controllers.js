@@ -55,25 +55,38 @@ angular.module('starter.controllers', [])
     }
   }
 
-  $scope.user = JSON.parse(localStorage.user);
+  if(localStorage.user){
+    $scope.user = JSON.parse(localStorage.user);
+    getTypes($scope.user.id);
+    getTags($scope.user.id);
+    getLocation($scope.user.id);
+  }
   $rootScope.$on('refresh' , function () {
     $scope.user = JSON.parse(localStorage.user);
+    getTypes($scope.user.id);
+    getTags($scope.user.id);
+    getLocation($scope.user.id);
   });
-  getData($scope.user.id);
 
-  function getData(id) {
+  function getTypes(id) {
     $http.get('/default/user/type/list?userId=' + id)
       .then(function (response) {
         $scope.types = response.data;
       },function (err) {
         $ionicLoading.show({template:err.data.message,duration:1000});
       });
+  }
+
+  function getTags(id) {
     $http.get('/default/user/tag/list?userId=' + id)
       .then(function (response) {
         $scope.tags = response.data;
       },function (err) {
         $ionicLoading.show({template:err.data.message,duration:1000});
       });
+  }
+
+  function getLocation(id) {
     $http.get('/default/user/location/list?userId=' + id)
       .then(function (response) {
         $scope.locations = response.data;
@@ -123,12 +136,15 @@ angular.module('starter.controllers', [])
   $rootScope.$on('closeAdd' , function(){
     if($scope.addTypeModal){
       $scope.addTypeModal.hide();
+      getTypes($scope.user.id);
     }
     if($scope.addTagModal){
       $scope.addTagModal.hide();
+      getTags($scope.user.id);
     }
     if($scope.addLocationModal){
       $scope.addLocationModal.hide();
+      getLocation($scope.user.id);
     }
   })
 })

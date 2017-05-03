@@ -2,12 +2,18 @@
  * Created by Administrator on 2017/4/30.
  */
 angular.module('starter.controllers')
-  .controller('SelectTagCtrl' , function($scope,$ionicModal){
-    $scope.tags = [
-      {id:1,name:'tag1',num:4},
-      {id:2,name:'tag2',num:8},
-      {id:3,name:'tag3',num:11}
-    ];
+  .controller('SelectTagCtrl' , function($scope,$http,$ionicModal,$rootScope,$ionicLoading){
+    $scope.user = JSON.parse(localStorage.user);
+    $rootScope.$on('refresh' , function () {
+      $scope.user = JSON.parse(localStorage.user);
+    });
+    $http.get('/default/user/tag/list?userId=' + $scope.user.id)
+      .then(function (response) {
+        $scope.tags = response.data;
+      },function (err) {
+        $ionicLoading.show({template:err.data.message,duration:1000});
+      });
+
     $scope.addTag = function(){
       $ionicModal.fromTemplateUrl('templates/add-tag.html',{
         scope:$scope.$new(),
