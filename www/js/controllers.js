@@ -61,7 +61,7 @@ angular.module('starter.controllers', [])
     getTags($scope.user.id);
     getLocation($scope.user.id);
   }
-  $rootScope.$on('refresh' , function () {
+  $rootScope.$on('newUser' , function () {
     $scope.user = JSON.parse(localStorage.user);
     getTypes($scope.user.id);
     getTags($scope.user.id);

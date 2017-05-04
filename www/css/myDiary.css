@@ -9,7 +9,7 @@
   display: -webkit-box;
 }
 .diary .diary-info .diary-time{
-  width: 10%;
+  width: 40px;
   text-align: center;
 }
 .diary .diary-info .diary-time .diary-day , .diary .diary-info .diary-clock{

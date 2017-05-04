@@ -4,6 +4,9 @@
 angular.module('starter.controllers')
 .controller('WriteCtrl' , function($scope,$ionicModal,$http,$rootScope,$ionicLoading,$state){
   $scope.user = JSON.parse(localStorage.user);
+  $rootScope.$on('newUser',function () {
+    $scope.user = JSON.parse(localStorage.user);
+  });
   $scope.$on('$ionicView.enter',function () {
     $scope.diary = {};
     $scope.diary.now = getNowFormatDate();
