@@ -12,4 +12,7 @@
   resize: none;
   padding: 5px;
 }
+button[disabled]{
+  color: #cccccc !important;
+}
 

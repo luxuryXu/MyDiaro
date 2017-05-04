@@ -4,6 +4,6 @@
       <div class="modify-name"><input type="text" ng-model=user.nickName /></div>
       <div class="user-words">个性签名</div>
       <div class="modify-words"><textarea ng-model=user.sign ></textarea></div>
-      <div class="save"><button class="theme">保存</button></div>
+      <div class="save"><button class="theme" ng-disabled=!user.nickName||!user.sign ng-click=save();>保存</button></div>
   </ion-content>
 </ion-view>

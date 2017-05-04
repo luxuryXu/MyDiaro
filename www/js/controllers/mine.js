@@ -11,6 +11,9 @@ angular.module('starter.controllers')
   $rootScope.$on('newUser',function () {
     $scope.user = JSON.parse(localStorage.user);
   });
+  $rootScope.$on('modify' , function () {
+    $scope.user = JSON.parse(localStorage.user);
+  });
   $scope.signOut = function () {
     localStorage.removeItem('user');
     $state.go('app.login');
