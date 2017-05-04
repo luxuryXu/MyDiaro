@@ -11,8 +11,8 @@ angular.module('starter.controllers')
     $scope.user = JSON.parse(localStorage.user);
 
     $rootScope.$on('newUser',function () {
-      checkLock();
       $scope.user = JSON.parse(localStorage.user);
+      checkLock();
       $scope.user.style = !$scope.user.style?'337ab7':$scope.user.style;
       $css.attr('href' , 'css/style-'+$scope.user.style+'.css');
       $scope.myDiaries = [];
@@ -57,6 +57,7 @@ angular.module('starter.controllers')
     });
 
     function checkLock() {
+      console.log($scope.user.lockCode);
       if($scope.user.lockCode){
         $ionicModal.fromTemplateUrl('templates/lockCode.html' , {
           scope:$scope.$new(),
