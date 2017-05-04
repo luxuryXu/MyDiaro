@@ -3,7 +3,7 @@
 }
 .add-view .add-text{
   height: 44px;
-  padding: 8px 5px;
+  padding: 8px 5px 0;
 }
 .add-view .add-text input{
   width: 100%;

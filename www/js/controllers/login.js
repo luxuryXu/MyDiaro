@@ -4,10 +4,6 @@
 angular.module('starter.controllers')
 .controller('LoginCtrl' , function ($scope , loginService , $ionicLoading , $rootScope , $ionicModal , $state) {
     $scope.doLogin = function () {
-      // var color = '000000';
-      // var $css = $('.style');
-      // $css.attr('href' , 'css/style-'+color+'.css');
-      // $rootScope.loginModal.hide();
       loginService.login($scope.loginData)
         .then(function (response) {
           localStorage.user = JSON.stringify(response.data);

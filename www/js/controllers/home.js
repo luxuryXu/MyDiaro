@@ -9,6 +9,18 @@ angular.module('starter.controllers')
     $scope.currentPage = 1;
     $scope.limit = 5;
     $scope.user = JSON.parse(localStorage.user);
+    if($scope.user.lockCode){
+      $ionicModal.fromTemplateUrl('templates/lockCode.html' , {
+        scope:$scope.$new(),
+        animation:'slide-in-up'
+      }).then(function (modal) {
+        $scope.lockModal = modal;
+        modal.show();
+      });
+    }
+    $scope.$on('ok' , function () {
+      $scope.lockModal.hide();
+    });
     $rootScope.$on('newUser',function () {
       $scope.user = JSON.parse(localStorage.user);
       $scope.user.style = !$scope.user.style?'337ab7':$scope.user.style;

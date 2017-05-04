@@ -1,3 +1,15 @@
-<ion-modal-view id=privacy-view ng-controller=PrivacyCtrl>
-
+<ion-modal-view class=add-view ng-controller=PrivacyCtrl>
+  <div class="modal-header theme">
+    <span class="cancel" ng-click=$emit('closePrivacy',{});>取消</span>
+    <span class="modal-title">设置隐私密码</span>
+    <span class="modal-plus"><button ng-click=confirm(); ng-disabled=!lockCode||!confirmCode||lockCode!=confirmCode>确定</button></span>
+  </div>
+  <ion-content style="top: 44px;">
+    <div class="add-text">
+      <input type="password" minlength="4" maxlength="4" ng-model=$parent.lockCode placeholder="输入隐私密码"/>
+    </div>
+    <div class="add-text">
+      <input type="password" minlength="4" maxlength="4" ng-model=$parent.confirmCode placeholder="确认隐私密码"/>
+    </div>
+  </ion-content>
 </ion-modal-view>
