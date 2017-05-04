@@ -31,3 +31,88 @@
   padding: 5px;
   overflow-y: auto;
 }
+
+#passing-view ion-slide:nth-child(1) .d:nth-child(9n+1){
+   background: #8e7a91;
+ }
+#passing-view ion-slide:nth-child(1) .d:nth-child(9n+2){
+  background: #7f9da8;
+}
+#passing-view ion-slide:nth-child(1) .d:nth-child(9n+3){
+  background: #b4ca76;
+}
+#passing-view ion-slide:nth-child(1) .d:nth-child(9n+4){
+  background: #bbc8e2;
+}
+#passing-view ion-slide:nth-child(1) .d:nth-child(9n+5){
+  background: #c0b1a5;
+}
+#passing-view ion-slide:nth-child(1) .d:nth-child(9n+6){
+  background: #978cc4;
+}
+#passing-view ion-slide:nth-child(1) .d:nth-child(9n+7){
+  background: #75c99b;
+}
+#passing-view ion-slide:nth-child(1) .d:nth-child(9n+8){
+  background: #b489ca;
+}
+#passing-view ion-slide:nth-child(1) .d:nth-child(9n+9){
+  background: #799081;
+}
+
+#passing-view ion-slide:nth-child(2) .d:nth-child(9n+3){
+  background: #8e7a91;
+}
+#passing-view ion-slide:nth-child(2) .d:nth-child(9n+4){
+  background: #7f9da8;
+}
+#passing-view ion-slide:nth-child(2) .d:nth-child(9n+1){
+  background: #b4ca76;
+}
+#passing-view ion-slide:nth-child(2) .d:nth-child(9n+2){
+  background: #bbc8e2;
+}
+#passing-view ion-slide:nth-child(2) .d:nth-child(9n+5){
+  background: #c0b1a5;
+}
+#passing-view ion-slide:nth-child(2) .d:nth-child(9n+7){
+  background: #978cc4;
+}
+#passing-view ion-slide:nth-child(2) .d:nth-child(9n+9){
+  background: #75c99b;
+}
+#passing-view ion-slide:nth-child(2) .d:nth-child(9n+8){
+  background: #b489ca;
+}
+#passing-view ion-slide:nth-child(2) .d:nth-child(9n+6){
+  background: #799081;
+}
+
+#passing-view ion-slide:nth-child(3) .d:nth-child(9n+9){
+  background: #8e7a91;
+}
+#passing-view ion-slide:nth-child(3) .d:nth-child(9n+8){
+  background: #7f9da8;
+}
+#passing-view ion-slide:nth-child(3) .d:nth-child(9n+7){
+  background: #b4ca76;
+}
+#passing-view ion-slide:nth-child(3) .d:nth-child(9n+6){
+  background: #bbc8e2;
+}
+#passing-view ion-slide:nth-child(3) .d:nth-child(9n+5){
+  background: #c0b1a5;
+}
+#passing-view ion-slide:nth-child(3) .d:nth-child(9n+4){
+  background: #978cc4;
+}
+#passing-view ion-slide:nth-child(3) .d:nth-child(9n+3){
+  background: #75c99b;
+}
+#passing-view ion-slide:nth-child(3) .d:nth-child(9n+2){
+  background: #b489ca;
+}
+#passing-view ion-slide:nth-child(3) .d:nth-child(9n+1){
+  background: #799081;
+}
+

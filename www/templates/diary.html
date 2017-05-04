@@ -1,12 +1,11 @@
-<div class="d">
+<div class="d" xx-href=#/app/diaro-detail/{{ngModel.id}}>
   <div class="d-head">
-    <img ng-src={{ngModel.user.avatarUrl}} />{{ngModel.user.nickName}}
+    {{ngModel.user.nickName}}
   </div>
-  <div class="d-content">
-    {{ngModel.text}}
+  <div class="d-content" ng-bind-html=ngModel.content>
   </div>
   <div class="d-info">
     <div class="d-time">{{ngModel.time}}</div>
-    <div class="d-praise">{{ngModel.stats.loves}}<i class="ion-ios-heart-outline"></i></div>
+    <div class="d-praise">{{ngModel.loves}}<i class="ion-ios-heart-outline"></i></div>
   </div>
 </div>

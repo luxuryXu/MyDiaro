@@ -1,8 +1,8 @@
 <ion-view hide-nav-bar="true" id="diary-view">
   <ion-content>
-    <div class="mine-info" ng-if=user.id!=diary.userId>
+    <div class="mine-info" ng-if=user.id!=diary.user.id>
       <div class="mine-head"></div>
-      <p class="mine-name">{{diary.id}}</p>
+      <p class="mine-name">{{diary.user.nickName}}</p>
       <p class="mine-words">{{diary.sign}}</p>
     </div>
     <div class="main">
@@ -20,14 +20,14 @@
       </div>
     </div>
   </ion-content>
-  <div class="operates theme" ng-if=user.id!=diary.userId>
+  <div class="operates theme" ng-if=user.id!=diary.user.id>
     <div ng-click="$ionicGoBack();"><i class="ion-android-arrow-back"></i></div>
     <div><i class="ion-ios-heart-outline"></i></div>
     <div><i class="ion-ios-star-outline"></i></div>
     <!--<div><i class="ion-android-share-alt"></i></div>-->
     <div><i class="ion-alert-circled"></i></div>
   </div>
-  <div class="theme self" ng-if=user.id==diary.userId>
+  <div class="theme self" ng-if=user.id==diary.user.id>
     <div ng-click="$ionicGoBack();"><i class="ion-android-arrow-back"></i></div>
   </div>
 </ion-view>

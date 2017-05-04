@@ -2,25 +2,56 @@
  * Created by Administrator on 2017/2/18.
  */
 angular.module('starter.controllers')
-.controller('PassingTravellersCtrl' , function($scope,$state,$ionicSlideBoxDelegate,toolsService){
+.controller('PassingTravellersCtrl' , function($scope,$http,$state,$ionicSlideBoxDelegate,$ionicLoading){
   var now = new Date().getTime();
-  setTimeout(function () {
-    var randomColor;
-    var d = $('.d');
-    for(var i=0; i<d.length; i++){
-      randomColor = toolsService.randomColor();
-      $(d[i]).css('background',randomColor);
-    }
-  },100);
-
   $scope.name = $state.current.name;
+  $scope.limit = 10;
   $scope.index = 0;
+  getData($scope.index,$scope.limit);
   $scope.select = function (index) {
       $scope.index = index;
+      getData(index);
   }
   $scope.slideTo = function (index) {
       $ionicSlideBoxDelegate.$getByHandle('passingSlide').slide(index,400);
+      getData(index);
+  };
+
+
+  function getData(index) {
+    switch (index){
+      case 0:
+        $http.get('/default/diary/newest/list',
+          {params:{offset:0,limit:$scope.limit}}
+        ).then(function (res) {
+          $scope.newDiaries = res.data.resultList;
+          for(var i in $scope.newDiaries){
+            $scope.newDiaries[i].time = $scope.changeTime(now-$scope.newDiaries[i].time);
+          }
+          console.log($scope.newDiaries);
+        },function (err) {
+          $ionicLoading.show({template:err.data.message,duration:1000});
+        });
+        break;
+      case 1:
+        $http.get('/default/diary/hot/list',
+          {params:{offset:0,limit:$scope.limit}}
+        ).then(function (res) {
+          $scope.hotDiaries = res.data.resultList;
+          for(var i in $scope.hotDiaries){
+            $scope.hotDiaries[i].time = $scope.changeTime(now-$scope.hotDiaries[i].time);
+          }
+          console.log($scope.hotDiaries);
+        },function (err) {
+          $ionicLoading.show({template:err.data.message,duration:1000});
+        });
+        break;
+      case 2:
+        break;
+    }
   }
+
+
   $scope.diaries = [
     {
       id : 1,
@@ -77,9 +108,7 @@ angular.module('starter.controllers')
     return str;
   }
 
-  for(var i in $scope.diaries){
-    $scope.diaries[i].time = $scope.changeTime(now-$scope.diaries[i].time);
-  }
+
 
 
 
