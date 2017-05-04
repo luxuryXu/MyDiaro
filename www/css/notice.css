@@ -1,3 +1,10 @@
+#notice-view ion-content{
+  background: #ffffff;
+}
+#notice-view .notice{
+  padding: 5px;
+  border-bottom: 1px solid #cccccc;
+}
 #notice-view .head{
   height: 30px;
   line-height: 30px;
@@ -10,4 +17,7 @@
 }
 #notice-view .head-right{
   float: right;
+}
+#notice-view .content{
+  padding-left: 13px;
 }
