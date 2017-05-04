@@ -1,26 +1,33 @@
 <ion-view hide-nav-bar="true" id="diary-view">
   <ion-content>
-    <div class="mine-info">
+    <div class="mine-info" ng-if=user.id!=diary.userId>
       <div class="mine-head"></div>
-      <p class="mine-name">赏金猎人的男朋友</p>
-      <p class="mine-words">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+      <p class="mine-name">{{diary.id}}</p>
+      <p class="mine-words">{{diary.sign}}</p>
     </div>
     <div class="main">
       <div class="main-top">
-        <span class="time">{{time}}</span>
-        <span class="eye"><i class="ion-ios-eye-outline"></i> {{eyeNum}}</span>
-        <span class="loves"><i class="ion-ios-heart-outline"></i> {{collections}}</span>
+        <span class="time">{{diary.time|date:'yyyy-MM-dd HH:mm'}}</span>
+        <span>{{diary.location.name}}</span>
+        <span class="eye"><i class="ion-ios-eye-outline"></i> {{diary.views}}</span>
+        <span class="loves"><i class="ion-ios-heart-outline"></i> {{diary.collects}}</span>
       </div>
-      <div class="main-mid">
-        {{text}}
+      <div class="main-info">
+        <div>分类：{{diary.type.name}}</div>
+        <div>标签：{{diary.tag.name}}</div>
+      </div>
+      <div class="main-mid" ng-bind-html=diary.content>
       </div>
     </div>
   </ion-content>
-  <div class="operates theme">
+  <div class="operates theme" ng-if=user.id!=diary.userId>
     <div ng-click="$ionicGoBack();"><i class="ion-android-arrow-back"></i></div>
     <div><i class="ion-ios-heart-outline"></i></div>
     <div><i class="ion-ios-star-outline"></i></div>
-    <div><i class="ion-android-share-alt"></i></div>
+    <!--<div><i class="ion-android-share-alt"></i></div>-->
     <div><i class="ion-alert-circled"></i></div>
+  </div>
+  <div class="theme self" ng-if=user.id==diary.userId>
+    <div ng-click="$ionicGoBack();"><i class="ion-android-arrow-back"></i></div>
   </div>
 </ion-view>

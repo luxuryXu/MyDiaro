@@ -11,12 +11,23 @@
 }
 #diary-view .main-top .time{
   float: left;
+  margin-right: 5px;
 }
 #diary-view .main-top .eye , #diary-view .main-top .loves{
   float: right;
 }
 #diary-view .main-top .loves{
   margin-right: 5px;
+}
+#diary-view .main-info{
+  display: box;
+  display: -webkit-box;
+  border-bottom:1px solid #f1f1f1;
+}
+#diary-view .main-info div{
+  -webkit-box-flex: 1;
+  height: 30px;
+  line-height: 30px;
 }
 #diary-view .main-mid{
   padding: 5px 0;
@@ -34,5 +45,17 @@
 #diary-view .operates>div{
   box-flex:1;
   -webkit-box-flex: 1;
+  font-size: 20px;
+}
+#diary-view .self{
+  height: 40px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  line-height: 40px;
+}
+#diary-view .self>div{
+  width: 25%;
   font-size: 20px;
 }
