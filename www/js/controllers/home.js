@@ -9,19 +9,9 @@ angular.module('starter.controllers')
     $scope.currentPage = 1;
     $scope.limit = 10;
     $scope.user = JSON.parse(localStorage.user);
-    if($scope.user.lockCode){
-      $ionicModal.fromTemplateUrl('templates/lockCode.html' , {
-        scope:$scope.$new(),
-        animation:'slide-in-up'
-      }).then(function (modal) {
-        $scope.lockModal = modal;
-        modal.show();
-      });
-    }
-    $scope.$on('ok' , function () {
-      $scope.lockModal.hide();
-    });
+
     $rootScope.$on('newUser',function () {
+      checkLock();
       $scope.user = JSON.parse(localStorage.user);
       $scope.user.style = !$scope.user.style?'337ab7':$scope.user.style;
       $css.attr('href' , 'css/style-'+$scope.user.style+'.css');
@@ -29,6 +19,11 @@ angular.module('starter.controllers')
       $scope.currentPage = 1;
       getDiaries($scope.currentPage);
     });
+
+    $scope.$on('ok' , function () {
+      $scope.lockModal.hide();
+    });
+
     $scope.user.style = !$scope.user.style?'337ab7':$scope.user.style;
     $css.attr('href' , 'css/style-'+$scope.user.style+'.css');
     getDiaries($scope.currentPage);
@@ -53,14 +48,6 @@ angular.module('starter.controllers')
     $scope.more = function () {
       $scope.currentPage = $scope.currentPage+1;
       getDiaries($scope.currentPage);
-      // setTimeout(function () {
-      //   var borderT = $('.borderT');
-      //   var randomColor;
-      //   for(var i=0; i<borderT.length; i++){
-      //     randomColor = toolsService.randomColor();
-      //     $(borderT[i]).css('border-top-color' , randomColor);
-      //   }
-      // },100);
     }
 
     $rootScope.$on('getDiaries' , function () {
@@ -68,4 +55,16 @@ angular.module('starter.controllers')
       $scope.currentPage = 1;
       getDiaries($scope.currentPage);
     });
+
+    function checkLock() {
+      if($scope.user.lockCode){
+        $ionicModal.fromTemplateUrl('templates/lockCode.html' , {
+          scope:$scope.$new(),
+          animation:'slide-in-up'
+        }).then(function (modal) {
+          $scope.lockModal = modal;
+          modal.show();
+        });
+      }
+    }
   });

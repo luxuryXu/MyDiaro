@@ -105,7 +105,7 @@ angular.module('starter.controllers')
       loves:0,
       collects:0,
       views:0,
-      userId:$scope.user.id
+      user:$scope.user
     };
     $http({
       method:'POST',
