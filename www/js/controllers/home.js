@@ -1,16 +1,20 @@
 angular.module('starter.controllers')
   .controller('HomeCtrl',function($scope,$state,$ionicLoading,$http,toolsService,$rootScope,$ionicModal){
+    if(!localStorage.user){
+      $state.go('app.login');
+    }
     $scope.name = $state.current.name;
     $scope.myDiaries = [];
     $scope.currentPage = 1;
     $scope.limit = 5;
-    if(localStorage.user){
+    $scope.user = JSON.parse(localStorage.user);
+    $rootScope.$on('newUser',function () {
       $scope.user = JSON.parse(localStorage.user);
+      $scope.myDiaries = [];
+      $scope.currentPage = 1;
       getDiaries($scope.currentPage);
-    }
-    $rootScope.$on('refresh' , function () {
-      $scope.user = JSON.parse(localStorage.user);
     });
+    getDiaries($scope.currentPage);
 
     function getDiaries(currentPage) {
       $http.get('/default/diary/list/',{params:{

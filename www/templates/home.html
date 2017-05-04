@@ -5,11 +5,12 @@
     <div class="home-title">项目列表</div>
     <div class="write-diaro" xx-href=#/app/write><i class="ion-ios-compose-outline"></i></div>
   </ion-header-bar>
-  <div class="first-time">二月,2017</div>
+  <!--<div class="first-time">二月,2017</div>-->
   <ion-content>
     <my-diary ng-model=myDiary ng-repeat="myDiary in myDiaries"></my-diary>
-    <p class="more" ng-if=totalPages!=currentPage ng-click=more();><button>加载更多</button></p>
+    <p class="more" ng-if=totalPages!=currentPage&&totalPages!=0 ng-click=more();><button>加载更多</button></p>
     <p class="more" ng-if=totalPages==currentPage><button>我是有底线的</button></p>
+    <p class="more" ng-if=totalPages==0><span>还没有日记，快去</span><button>创建日记</button>吧</p>
   </ion-content>
   <div ng-include="'templates/bottom-nav.html'"></div>
 </ion-view>

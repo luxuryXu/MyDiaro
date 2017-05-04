@@ -23,15 +23,15 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','st
     }
   });
 
-  if( !localStorage.user ){
-    $ionicModal.fromTemplateUrl('templates/login.html' , {
-      scope:$rootScope.$new(),
-      animation:'slide-in-up'
-    }).then(function(modal){
-      modal.show();
-      $rootScope.loginModal = modal;
-    });
-  }
+  // if( !localStorage.user ){
+  //   $ionicModal.fromTemplateUrl('templates/login.html' , {
+  //     scope:$rootScope.$new(),
+  //     animation:'slide-in-up'
+  //   }).then(function(modal){
+  //     modal.show();
+  //     $rootScope.loginModal = modal;
+  //   });
+  // }
 })
 
 
@@ -195,6 +195,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','st
         }
       }
     })
+
+    .state('app.login' , {
+      url:'/login',
+      views: {
+        'menuContent':{
+          templateUrl:'templates/login.html',
+          controller:'LoginCtrl'
+        }
+      }
+    });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });
