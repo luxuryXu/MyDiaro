@@ -3,5 +3,5 @@
  */
 angular.module('starter.controllers')
 .controller('SettingsCtrl' , function($scope){
-  $scope.data = 1;
+
 });

@@ -5,7 +5,6 @@ angular.module('starter.controllers')
 .controller('DataModifyCtrl' , function($scope,$http,$state,$ionicLoading,$ionicHistory,$rootScope){
     $scope.user = JSON.parse(localStorage.user);
     $scope.save = function () {
-      console.log($scope.user);
       var info = {
         userId:$scope.user.id,
         nickName:$scope.user.nickName,
@@ -25,6 +24,9 @@ angular.module('starter.controllers')
         },1000);
       },function (err) {
         $ionicLoading.show({template:err.data.message,duration:1000});
+        setTimeout(function () {
+          $ionicHistory.goBack();
+        },1000);
       });
     }
 });

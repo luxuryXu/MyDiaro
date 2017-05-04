@@ -3,6 +3,7 @@ angular.module('starter.controllers')
     if(!localStorage.user){
       $state.go('app.login');
     }
+    var $css = $('.style');
     $scope.name = $state.current.name;
     $scope.myDiaries = [];
     $scope.currentPage = 1;
@@ -10,10 +11,14 @@ angular.module('starter.controllers')
     $scope.user = JSON.parse(localStorage.user);
     $rootScope.$on('newUser',function () {
       $scope.user = JSON.parse(localStorage.user);
+      $scope.user.style = !$scope.user.style?'337ab7':$scope.user.style;
+      $css.attr('href' , 'css/style-'+$scope.user.style+'.css');
       $scope.myDiaries = [];
       $scope.currentPage = 1;
       getDiaries($scope.currentPage);
     });
+    $scope.user.style = !$scope.user.style?'337ab7':$scope.user.style;
+    $css.attr('href' , 'css/style-'+$scope.user.style+'.css');
     getDiaries($scope.currentPage);
 
     function getDiaries(currentPage) {
