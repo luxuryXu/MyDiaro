@@ -24,10 +24,17 @@ angular.module('starter.controllers')
     $scope.doRegister = function () {
       loginService.register($scope.register)
         .then(function (response) {
-          localStorage.user = JSON.stringify(response.data);
           $ionicLoading.show({template:'注册成功',duration:1000});
           $scope.registerModal.hide();
-          $rootScope.loginModal.hide();
+          loginService.login($scope.register)
+            .then(function (response) {
+              localStorage.user = JSON.stringify(response.data);
+              $ionicLoading.show({template:'登录成功',duration:1000});
+              $rootScope.$broadcast('newUser',{});
+              setTimeout(function () {
+                $state.go('app.home');
+              },1000);
+            });
         },function (err) {
           $ionicLoading.show({template:err.data.message,duration:1000});
         });
