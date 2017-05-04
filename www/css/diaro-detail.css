@@ -1,5 +1,6 @@
 #diary-view ion-content{
   background: #ffffff;
+
 }
 #diary-view .main{
   padding: 5px;
@@ -31,6 +32,7 @@
 }
 #diary-view .main-mid{
   padding: 5px 0;
+  min-height: 240px;
 }
 #diary-view .operates{
   height: 40px;
@@ -41,6 +43,44 @@
   display: -webkit-box;
   text-align: center;
   line-height: 40px;
+}
+#diary-view .comment-input{
+  position: fixed;
+  height: 40px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  bottom: 40px;
+  background: #f1f1f1;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+#diary-view .comment-input input{
+  background: #ffffff;
+  width: calc(100% - 5px);
+  height: 30px;
+  margin-top: 4px;
+  margin-left: 5px;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+#diary-view .comment-input button{
+  background: none;
+  border: none;
+  color: #444444;
+  width: 100%;
+  height: 100%;
+}
+#diary-view .comment-input div:nth-child(1){
+  display: inline-block;
+  width: calc(100% - 60px);
+  height: 40px;
+}
+#diary-view .comment-input div:nth-child(2){
+  float: right;
+  width: 60px;
+  height: 40px;
+  padding:5px;
 }
 #diary-view .operates>div{
   box-flex:1;
@@ -58,4 +98,47 @@
 #diary-view .self>div{
   width: 25%;
   font-size: 20px;
+}
+#diary-view .comments{
+  padding-bottom: 100px;
+}
+#diary-view .comments-title{
+  height: 30px;
+  line-height: 30px;
+  padding-left: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+#diary-view .comment{
+  min-height: 60px;
+  display: box;
+  display: -webkit-box;
+  padding: 5px 5px 30px;
+  position: relative;
+}
+#diary-view .comment-time{
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  color: #cccccc;
+}
+#diary-view .comment{
+  border-top: 1px solid #f1f1f1;
+}
+#diary-view .comment-left{
+  width: 80px;
+  padding-right: 5px;
+  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#diary-view .comment-right{
+  -webkit-box-flex: 1;
+  text-align: justify;
+}
+#diary-view .no-comment{
+  padding-left: 5px;
+  color: #666;
+  text-align: center;
 }

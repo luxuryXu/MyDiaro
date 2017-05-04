@@ -10,7 +10,7 @@
         <span class="time">{{diary.time|date:'yyyy-MM-dd HH:mm'}}</span>
         <span>{{diary.location.name}}</span>
         <span class="eye"><i class="ion-ios-eye-outline"></i> {{diary.views}}</span>
-        <span class="loves"><i class="ion-ios-heart-outline"></i> {{diary.collects}}</span>
+        <span class="loves"><i class="ion-ios-heart-outline"></i> {{diary.loves}}</span>
       </div>
       <div class="main-info">
         <div>分类：{{diary.type.name}}</div>
@@ -19,11 +19,19 @@
       <div class="main-mid" ng-bind-html=diary.content>
       </div>
     </div>
+    <div class="comments">
+      <div class="comments-title themeWord">评论</div>
+      <comment-card ng-model=comment ng-repeat="comment in comments"></comment-card>
+      <div class="no-comment" ng-if=comments.length==0>暂无评论</div>
+    </div>
   </ion-content>
+  <div class="comment-input" ng-if=user.id!=diary.user.id><div><input type="text" ng-model=$parent.newComment.content placeholder="老铁，来波评论？" /></div><div><button ng-disabled=!newComment.content ng-click=send();>发送</button></div></div>
   <div class="operates theme" ng-if=user.id!=diary.user.id>
     <div ng-click="$ionicGoBack();"><i class="ion-android-arrow-back"></i></div>
-    <div><i class="ion-ios-heart-outline"></i></div>
-    <div><i class="ion-ios-star-outline"></i></div>
+    <div ng-if=!currentLoved><i class="ion-ios-heart-outline" ng-click=doLove();></i></div>
+    <div ng-if=currentLoved><i class="ion-ios-heart" ng-click=loved();></i></div>
+    <div ng-if=!currentCollected><i class="ion-ios-star-outline" ng-click=doCollect(1);></i></div>
+    <div ng-if=currentCollected><i class="ion-ios-star" ng-click=doCollect(0);></i></div>
     <!--<div><i class="ion-android-share-alt"></i></div>-->
     <div><i class="ion-alert-circled"></i></div>
   </div>

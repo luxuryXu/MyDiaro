@@ -28,7 +28,6 @@ angular.module('starter.controllers')
           for(var i in $scope.newDiaries){
             $scope.newDiaries[i].time = $scope.changeTime(now-$scope.newDiaries[i].time);
           }
-          console.log($scope.newDiaries);
         },function (err) {
           $ionicLoading.show({template:err.data.message,duration:1000});
         });
@@ -51,39 +50,6 @@ angular.module('starter.controllers')
     }
   }
 
-
-  $scope.diaries = [
-    {
-      id : 1,
-      title : '日记标题',
-      text : '日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容',
-      time : 1492351660320, //创建时间
-      stats:{
-        loves : 7
-      },
-      user:{
-        id : 1,
-        nickName : 'node' ,
-        avatarUrl : environment.imagePrefix + 'ionic.png'
-      }
-
-    },
-    {
-      id : 2,
-      title : '日记标题2',
-      text : '日记内容日22记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容日记内容',
-      time : 1492353774394, //创建时间
-      stats:{
-        loves : 77
-      },
-      user:{
-        id : 2,
-        nickName : 'xff' ,
-        avatarUrl : environment.imagePrefix + 'ionic.png'
-      }
-
-    }
-  ];
 
   $scope.changeTime = function (millions) {
     var str;
