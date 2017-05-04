@@ -7,7 +7,7 @@ angular.module('starter.controllers')
     $scope.name = $state.current.name;
     $scope.myDiaries = [];
     $scope.currentPage = 1;
-    $scope.limit = 5;
+    $scope.limit = 10;
     $scope.user = JSON.parse(localStorage.user);
     if($scope.user.lockCode){
       $ionicModal.fromTemplateUrl('templates/lockCode.html' , {
