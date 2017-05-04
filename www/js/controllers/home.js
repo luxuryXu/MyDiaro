@@ -53,14 +53,14 @@ angular.module('starter.controllers')
     $scope.more = function () {
       $scope.currentPage = $scope.currentPage+1;
       getDiaries($scope.currentPage);
-      setTimeout(function () {
-        var borderT = $('.borderT');
-        var randomColor;
-        for(var i=0; i<borderT.length; i++){
-          randomColor = toolsService.randomColor();
-          $(borderT[i]).css('border-top-color' , randomColor);
-        }
-      },100);
+      // setTimeout(function () {
+      //   var borderT = $('.borderT');
+      //   var randomColor;
+      //   for(var i=0; i<borderT.length; i++){
+      //     randomColor = toolsService.randomColor();
+      //     $(borderT[i]).css('border-top-color' , randomColor);
+      //   }
+      // },100);
     }
 
     $rootScope.$on('getDiaries' , function () {

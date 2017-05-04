@@ -27,7 +27,7 @@
   font-size: 1.6rem;
 }
 #home-view ion-content{
-  padding: 5px 5px 5px;
+  padding: 45px 5px 5px;
   top: 2.4rem;
   bottom: 49px;
 }
@@ -52,5 +52,34 @@
   border:none;
   color: #444444;
 }
+
+#home-view .diary:nth-child(9n+1){
+  border-top:3px solid #8e7a91;
+}
+#home-view .diary:nth-child(9n+2){
+  border-top:3px solid #799081;
+}
+#home-view .diary:nth-child(9n+3){
+  border-top:3px solid #75c99b;
+}
+#home-view .diary:nth-child(9n+4){
+  border-top:3px solid #b4ca76;
+}
+#home-view .diary:nth-child(9n+5){
+  border-top:3px solid #7f9da8;
+}
+#home-view .diary:nth-child(9n+6){
+  border-top:3px solid #c0b1a5;
+}
+#home-view .diary:nth-child(9n+7){
+  border-top:3px solid #bbc8e2;
+}
+#home-view .diary:nth-child(9n+8){
+  border-top:3px solid #978cc4;
+}
+#home-view .diary:nth-child(9n+9){
+  border-top:3px solid #b489ca;
+}
+
 
 
