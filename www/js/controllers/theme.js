@@ -47,6 +47,5 @@ angular.module('starter.controllers')
         $ionicHistory.goBack();
       },1000);
     });
-
   }
 })

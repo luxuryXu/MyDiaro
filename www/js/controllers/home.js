@@ -57,7 +57,6 @@ angular.module('starter.controllers')
     });
 
     function checkLock() {
-      console.log($scope.user.lockCode);
       if($scope.user.lockCode){
         $ionicModal.fromTemplateUrl('templates/lockCode.html' , {
           scope:$scope.$new(),

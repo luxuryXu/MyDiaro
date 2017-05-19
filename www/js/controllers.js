@@ -147,4 +147,14 @@ angular.module('starter.controllers', [])
       getLocation($scope.user.id);
     }
   })
+
+  // $scope.remove = function (id) {
+  //   $http.get('/nodeUrl/remove?id='+id)
+  //     .then(function (res) {
+  //       console.log(res);
+  //     })
+  //     .catch(function (err) {
+  //       alert(456);
+  //     });
+  // }
 })

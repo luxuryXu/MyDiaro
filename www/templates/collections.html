@@ -1,22 +1,5 @@
 <ion-view view-title="我的收藏" id="collections-view">
     <ion-content>
-      <div class="d" ng-repeat="i in [1,2,4,5] track by $index">
-        <div class="d-head">
-          <img src="../img/ionic.png" />名字
-        </div>
-        <div class="d-content">
-          我还是很想你，我还是很爱你。
-          我还是很想你，我还是很爱你。
-          我还是很想你，我还是很爱你。
-          我还是很想你，我还是很爱你。
-          我还是很想你，我还是很爱你。
-          我还是很想你，我还是很爱你。
-        </div>
-        <div class="d-info">
-          <div class="d-time">7分钟前</div>
-          <div class="d-praise">7435345<i class="ion-ios-heart-outline"></i></div>
-        </div>
-      </div>
-      </div>
+      <diary ng-model=collection ng-repeat="collection in collections"></diary>
     </ion-content>
 </ion-view>

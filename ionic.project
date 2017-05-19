@@ -5,6 +5,10 @@
     {
         "path": "/default",
         "proxyUrl": "http://localhost:8080"
+    },
+    {
+        "path": "/nodeUrl",
+        "proxyUrl": "http://localhost:3000"
     }
   ]
 }

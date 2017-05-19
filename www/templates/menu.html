@@ -17,12 +17,12 @@
         <div class="person-name">
             <div class="home" xx-href=#/app/home menu-close><i class="ion-ios-home-outline"></i></div>
             <div class="account"><i class="ion-ios-person"></i></div>
-            <div class="account-name">188529511822222</div>
+            <div class="account-name">{{user.phone}}</div>
             <div class="setting" ng-click="" menu-close><i class="ion-ios-close-outline"></i></div>
         </div>
         <div class="quantity">
-            <div class="total">合计: <i class="ion-android-create"></i> 5</div>
-            <div class="present">今天: <i class="ion-android-create"></i> 0</div>
+            <div class="total">合计: <i class="ion-android-create"></i> 15</div>
+            <div class="present">今天: <i class="ion-android-create"></i> 1</div>
         </div>
     </ion-header-bar>
     <ion-content class="menuList">
@@ -50,12 +50,17 @@
             <div class="attr-name"><span><i class="ion-ios-arrow-down"></i></span>分类</div>
             <div class="attr-icon plus" ng-click=addType($event); menu-close><i class="ion-ios-plus-empty"></i></div>
           </div>
-          <ul class="theme-list">
-            <li class="borderC" ng-repeat="type in types" ng-class="{'active':selectedType==type.name}">
+          <ion-list class="theme-list item-remove-animate item-icon-right">
+            <ion-item class="borderC" ng-repeat="type in types">
               <div class="type-title">{{type.name}}</div>
-              <div class="type-num">{{types.length}}</div>
-            </li>
-          </ul>
+              <ion-option-button class="button" ng-click="remove(type.id)">
+                删除
+              </ion-option-button>
+              <ion-option-button class="button edit" ng-click="remove(chat)">
+                编辑
+              </ion-option-button>
+            </ion-item>
+          </ion-list>
         </li>
         <li class="theme">
           <div class="theme-title" ng-click="isSlide(2);">
@@ -63,12 +68,17 @@
             <div class="attr-name"><span><i class="ion-ios-arrow-down"></i></span>标签</div>
             <div class="attr-icon plus" ng-click=addTag($event); menu-close><i class="ion-ios-plus-empty"></i></div>
           </div>
-          <ul class="theme-list">
-            <li class="borderC" ng-repeat="tag in tags">
+          <ion-list class="theme-list item-remove-animate item-icon-right">
+            <ion-item class="borderC" ng-repeat="tag in tags">
               <div class="type-title">{{tag.name}}</div>
-              <div class="type-num">{{tags.length}}</div>
-            </li>
-          </ul>
+              <ion-option-button class="button" ng-click="remove(chat)">
+                删除
+              </ion-option-button>
+              <ion-option-button class="button edit" ng-click="remove(chat)">
+                编辑
+              </ion-option-button>
+            </ion-item>
+          </ion-list>
         </li>
         <li class="theme">
           <div class="theme-title" ng-click="isSlide(3);">
@@ -76,12 +86,17 @@
             <div class="attr-name"><span><i class="ion-ios-arrow-down"></i></span>地点</div>
             <div class="attr-icon plus" ng-click=addLocation($event); menu-close><i class="ion-ios-plus-empty"></i></div>
           </div>
-          <ul class="theme-list">
-            <li class="borderC" ng-repeat="location in locations">
+          <ion-list class="theme-list item-remove-animate item-icon-right">
+            <ion-item class="borderC" ng-repeat="location in locations">
               <div class="type-title">{{location.name}}</div>
-              <div class="type-num">{{locations.length}}</div>
-            </li>
-          </ul>
+              <ion-option-button class="button" ng-click="remove(chat)">
+                 删除
+              </ion-option-button>
+              <ion-option-button class="button edit" ng-click="remove(chat)">
+                编辑
+              </ion-option-button>
+            </ion-item>
+          </ion-list>
         </li>
       </ul>
     </ion-content>
